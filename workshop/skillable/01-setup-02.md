@@ -15,7 +15,7 @@ Your first tab is the **Azure Portal**, where your pre-provisioned resource grou
    ![Azure portal home](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/skillable/images/01-setup-02-azure-portal-home.png)
 
 1. [] Select **Resource groups** in the portal to view the list of resource
-   groups.
+   groups.  Maximize **Edge** if you do not see the **Resource groups**
 1. [] Confirm you see **two** resource groups, one of which starts with
    **rg-lab540**.
 
