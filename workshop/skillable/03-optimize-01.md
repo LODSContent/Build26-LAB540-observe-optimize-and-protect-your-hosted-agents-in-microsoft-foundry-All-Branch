@@ -3,6 +3,9 @@
 Your Codespace should be ready now. Switch to its tab (Tab 3) and let's move to code-first observabilty.
 
 1. [] Switch to the **Codespace** tab. Wait until VS Code has fully loaded.
+1. [] If the **Codespace** has stopped after being idle, select **Restart** and wait for the **Codespace** to start. 
+1. [] Wait until **VS Code** has fully loaded. 
+1. [] If the **Do you trust the authors of the files in this folder?** prompt appears, select **Trust Folder** & **Continue** to proceed. 
 
 1. [] Open a terminal (**Terminal → New Terminal**).
 1. [] Confirm the core CLIs are present:
