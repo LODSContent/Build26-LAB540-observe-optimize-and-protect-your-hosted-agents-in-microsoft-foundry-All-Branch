@@ -4,9 +4,11 @@ Your second tab is the **Microsoft Foundry Portal**, where your hosted agent is
 deployed.
 
 1. [] Open a **new tab** in Edge. Click to focus and type +++https://ai.azure.com+++ as address.
-1. [] Click the **Start Building** button - it should reuse the logged-in profile from previous step.
-
-1. [] Toggle on the **New Foundry** switch if it isn't already active.
+1. [] Select the **Sign in** button to login with your credentials.
+1. [] After signing in, confirm that the **New Foundry** switch is enabled. If it isn't already active, toggle it on.
+1. [] On the **All resources** page, select the existing **ai-project-lab540-...** project.
+1. [] After the project opens, select **Agents** from the left navigation menu.
+1. [] Confirm that the existing **zava-concierge** agent is displayed. 
 1. [] Select the single project you see, then choose **Let's go**.
 
 <!-- TODO screenshot: Foundry portal home with New Foundry toggle on -->
