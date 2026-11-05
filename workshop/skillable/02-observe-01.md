@@ -5,7 +5,7 @@ meet your hosted agent.
 
 1. [] In the Foundry Portal, click on the **Build** option in navigation bar.
 1. [] Next, click the **Agents** option in the left navigation.
-1. [] Select the **Zava Travel Concierge** agent to open it.
+1. [] Select the **zava-concierge** agent to open it.
 
    <!-- Images are sourced from the self-guided tree to keep a single image set. -->
    ![The Foundry portal showing the pre-deployed Zava Travel Concierge agent](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/01-setup-07-agent.png)
