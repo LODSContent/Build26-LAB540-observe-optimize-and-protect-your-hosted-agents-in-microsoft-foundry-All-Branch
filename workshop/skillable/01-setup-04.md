@@ -8,11 +8,12 @@ start it now and let it warm up while you explore the agent.
 
 1. [] Open a **new tab** and navigate to
    +++https://github.com/enterprises/skillable-events/sso+++
-1. [] Select **Continue with GHE.com** and complete sign-in. You'll be
-   authenticated with the same lab credentials.
+1. [] Select **Continue** and complete the sign-in process. You’ll be authenticated with the same lab credentials. 
 
 <!-- TODO screenshot: GitHub SSO Continue with GHE button -->
 
+>[!Alert] If you receive a **404** error, wait for several minutes and then try again.
+ 
 ## Launch the Codespace
 
 1. [] Navigate to the workshop repo at +++https://aka.ms/build26/lab540/skillable+++
