@@ -15,11 +15,12 @@ specialists.
 
 ## Explore Trace Viewer
 
-1. [] Click the **Traces** button to open the **Trajectory** view, which
-   visualizes this turn's trace as a **conversation** — the concierge delegating
-   to the flight, hotel, and car-rental agents. Click **Play** to watch it
-   unfold, and check the metrics (top-right) for chat calls, tool calls, tokens,
-   time, and **spans**.
+1. [] Select **Traces**.
+1. [] Select **Conversation view**.
+1. [] Locate the recorded conversation and select the **Conversation ID.**
+1. [] In the trace detail window, select the **Trajectories** tab if it is not already selected.   
+1. [] **Trajectory** view visualizes this turns trace as a **conversation** — the concierge delegating
+   to the flight, hotel, and car-rental agents. Click **Play** to watch it unfold, and check the metrics (top-right) for chat calls, tool calls, tokens, time, and **spans**.
 
    ![The Trajectory view visualizing the conversation trace with the concierge delegating to the flight, hotel, and car-rental agents](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-04-trajectory.png)
 
