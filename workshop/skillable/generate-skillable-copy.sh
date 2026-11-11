@@ -68,7 +68,7 @@ README="README.md"
     if [ "$first" -eq 1 ]; then
       first=0
     else
-      printf '\n---\n\n'
+      printf '\n===\n\n'
     fi
     cat "$page"
   done

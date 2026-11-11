@@ -2,14 +2,9 @@
 
 # Get Started
 
-Welcome to **LAB540**! You're about to take the **Zava Travel Concierge** — a
-multi-agent travel planner running as a **Hosted Agent** on **Microsoft
-Foundry** — and make it observable, measurable, and better.
+Welcome to **LAB540**! You're about to take the **Zava Travel Concierge** — a multi-agent travel planner running as a **Hosted Agent** on **Microsoft Foundry** — and make it observable, measurable, and better.
 
->[!Knowledge] **Meet the agent.** Zava Travel's concierge coordinates three
-> specialist sub-agents — **flights**, **hotels**, and **car rentals** — each
-> grounded in its own data. The concierge never answers from its own
-> knowledge; it delegates to the specialists and composes the itinerary.
+>[!Knowledge] **Meet the agent.** Zava Travel's concierge coordinates three specialist sub-agents — **flights**, **hotels**, and **car rentals** — each grounded in its own data. The concierge never answers from its own knowledge; it delegates to the specialists and composes the itinerary.
 
 <br/>
 
@@ -17,9 +12,9 @@ Foundry** — and make it observable, measurable, and better.
 
 This lab runs in three short stages:
 
-1. **Setup** — get the infrastructure and your Codespace ready.
-2. **Observe** — explore the hosted agent in the playground and learn Foundry's built-in observability (metrics, traces, evaluations).
-3. **Optimize** — run the eval → fix → redeploy loop with Foundry Skills and GitHub Copilot.
+1. **Setup** &nbsp;•&nbsp; Get the infrastructure and your Codespace ready.
+2. **Observe** &nbsp;•&nbsp; Explore the hosted agent in the playground and learn Foundry's built-in observability features.
+3. **Optimize** &nbsp;•&nbsp; Run the eval → fix → redeploy loop with Microsoft Foundry Skills and GitHub Copilot.
 
 >[!Note] **Level:** 200–300 &nbsp;•&nbsp; **Duration:** 60 minutes
 
@@ -43,7 +38,7 @@ Take a moment to confirm your lab environment loaded correctly:
 
 >[!Alert] If you don't see these, raise your hand and ask a proctor for help before continuing.
 
----
+===
 
 # Log Into VM, Launch Browser
 
@@ -90,7 +85,7 @@ your **GitHub Codespace**.
 
 > ✅ **Success:** You signed into the VM and launched the browser for next steps.
 
----
+===
 
 # Tab 1 — Azure Portal
 
@@ -131,7 +126,7 @@ Your first tab is the **Azure Portal**, where your pre-provisioned resource grou
 
 > ✅ **Success:** the Azure Portal home page is open in **Tab 1**.
 
----
+===
 
 # Tab 2 — Foundry Portal
 
@@ -157,7 +152,7 @@ deployed.
 
 > ✅ **Success:** the Foundry Portal home is open in **Tab 2** with New Foundry on.
 
----
+===
 
 # Tab 3 — Launch Codespace
 
@@ -197,7 +192,7 @@ start it now and let it warm up while you explore the agent.
 > Portal, and your Codespace — and your dev environment is warming up. While it
 > builds, you'll explore the hosted agent and Foundry's built-in observability.
 
----
+===
 
 # Open Playground
 
@@ -224,7 +219,7 @@ meet your hosted agent.
 
 > ✅ **Success:** the Zava Travel Concierge playground is open and ready.
 
----
+===
 
 # Set Up Metrics
 
@@ -246,7 +241,7 @@ Before you send the first prompt, let's turn on the **evaluators** so Foundry sc
 > ✅ **Success:** evaluators are on and the playground is ready for your first
 > prompt.
 
----
+===
 
 # Run Prompt 1
 
@@ -299,7 +294,7 @@ Send a simple, single-specialist request and watch the metrics light up.
 > ✅ **Success:** you've seen a response scored live, opened its trace with
 > evaluations, and explored production monitoring.
 
----
+===
 
 # Run Prompt 2
 
@@ -346,7 +341,7 @@ specialists.
 > ✅ **Success:** you've inspected a multi-agent conversation trace through both
 > the Trajectory and User View lenses.
 
----
+===
 
 # Run Prompt 3
 
@@ -385,7 +380,7 @@ keep it on task.
 > agent work, and you understand Foundry's built-in observability — metrics,
 > traces, evaluations, and replays. Next, you'll improve the agent from code.
 
----
+===
 
 # Open Codespace
 
@@ -435,7 +430,7 @@ C#, where agents, tools, and orchestration are all defined in code.
 > available, you've reviewed the agent code, there's no stale **.foundry**
 > folder, and the concierge prompt is reset to the baseline.
 
----
+===
 
 # Sign in to Azure
 
@@ -484,7 +479,7 @@ Run the script to automatically have your **.env** created from the deployed inf
 
 > ✅ **Success:** you're signed in to Azure with both **az** and **azd**.
 
----
+===
 
 # Activate Copilot
 
@@ -544,7 +539,7 @@ Let's ask Copilot to help us recreate it before we begin optimization.
 > ✅ **Success:** Copilot is in Agent mode, the Foundry MCP is enabled, the model
 > is set, and approvals are bypassed.
 
----
+===
 
 # Meet the Skill
 
@@ -573,7 +568,7 @@ Before you run it, take a moment to understand what the **Observe skill** does.
 
 > ✅ **Success:** you understand what the Observe skill will do before you run it.
 
----
+===
 
 # Run the Skill
 
@@ -592,7 +587,7 @@ Now kick off the Observe skill and let it work.
 
 > ✅ **Success:** the Observe skill is running against your hosted agent.
 
----
+===
 
 # Watch Baseline
 
@@ -624,7 +619,7 @@ evaluation results, as shown below.
 > ✅ **Success:** you just saw **code-first optimization** — a baseline
 > evaluation and recommendations generated from your own editor.
 
----
+===
 
 # Pick Top Fix
 
@@ -650,7 +645,7 @@ apply.
 
 > ✅ **Success:** you've selected a recommendation and asked Copilot to apply it.
 
----
+===
 
 # Optimize & Redeploy
 
