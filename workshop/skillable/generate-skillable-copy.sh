@@ -42,6 +42,8 @@ fi
   Source branch: ${BRANCH}
   To target a different repo/branch: REPO=<owner/name> BRANCH=<branch> ./generate-skillable-copy.sh
 -->
+
+@lab.Title
 EOF
 
   first=1
@@ -60,6 +62,7 @@ echo "Wrote $OUT with ${#PAGES[@]} pages (branch: $BRANCH)."
 # README.md is the full lab: every page's content concatenated in order.
 README="README.md"
 {
+  printf '@lab.Title\n\n'
   first=1
   for page in "${PAGES[@]}"; do
     if [ "$first" -eq 1 ]; then

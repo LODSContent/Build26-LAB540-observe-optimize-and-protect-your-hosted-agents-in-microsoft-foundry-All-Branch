@@ -1,3 +1,5 @@
+@lab.Title
+
 # Get Started
 
 Welcome to **LAB540**! You're about to take the **Zava Travel Concierge** — a
