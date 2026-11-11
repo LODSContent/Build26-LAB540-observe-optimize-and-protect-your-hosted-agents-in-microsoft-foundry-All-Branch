@@ -7,6 +7,7 @@
 #
 # It picks up every NN-*.md page file (in sorted order), excludes README.md,
 # and emits one [!include[](raw-url)] directive per page, separated by ===.
+# It also rebuilds README.md as the full lab: all pages concatenated in order.
 #
 # Branch is taken from BRANCH env var, falling back to the current git branch.
 set -euo pipefail
@@ -53,3 +54,19 @@ EOF
 } > "$OUT"
 
 echo "Wrote $OUT with ${#PAGES[@]} pages (branch: $BRANCH)."
+
+# README.md is the full lab: every page's content concatenated in order.
+README="README.md"
+{
+  first=1
+  for page in "${PAGES[@]}"; do
+    if [ "$first" -eq 1 ]; then
+      first=0
+    else
+      printf '\n---\n\n'
+    fi
+    cat "$page"
+  done
+} > "$README"
+
+echo "Wrote $README combining ${#PAGES[@]} pages."
