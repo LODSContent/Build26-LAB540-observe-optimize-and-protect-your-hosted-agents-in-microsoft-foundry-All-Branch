@@ -17,7 +17,7 @@ As it runs, you'll see Copilot:
 It creates a plan of action and starts executing tasks to establish the baseline
 evaluation results, as shown below.
 
-![Copilot Chat creating tasks and running the baseline evaluation](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-06-init-tasks.png)
+![Copilot Chat creating tasks and running the baseline evaluation](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-init-tasks.png)
 
 >[!Alert] **Let it finish.** The baseline run and analysis take a few minutes.
 > Watch the updates stream in and **wait until the recommendations appear**

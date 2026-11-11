@@ -30,7 +30,7 @@ Take a moment to confirm your lab environment loaded correctly:
 1. [] Confirm you see an **Instructions** tab and a **Resources** tab in the lab interface.
 1. [] Confirm the virtual machine shows a **login screen**, as in the screenshot below.
 
-   ![Lab interface with Instructions and Resources tabs and the VM login screen](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/skillable/images/00-intro-lab-tabs-vm-login.png)
+   ![Lab interface with Instructions and Resources tabs and the VM login screen](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/00-intro-lab-tabs-vm-login.png)
 
 1. [] Click the **Resources** tab and verify it has the **Subscription**,
    **Username**, and **TAP** values filled in.

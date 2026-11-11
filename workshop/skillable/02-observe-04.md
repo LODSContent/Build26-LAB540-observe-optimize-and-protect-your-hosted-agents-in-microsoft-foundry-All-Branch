@@ -11,7 +11,7 @@ specialists.
    includes flight, hotel, and car results, so all three specialists were called
    before composing the final answer.
 
-   ![The prompt 2 itinerary response combining flights, hotel, and car rental](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-04-prompt2.png)
+   ![The prompt 2 itinerary response combining flights, hotel, and car rental](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-prompt2.png)
 
 ## Explore Trace Viewer
 
@@ -22,14 +22,14 @@ specialists.
 1. [] **Trajectory** view visualizes this turns trace as a **conversation** — the concierge delegating
    to the flight, hotel, and car-rental agents. Click **Play** to watch it unfold, and check the metrics (top-right) for chat calls, tool calls, tokens, time, and **spans**.
 
-   ![The Trajectory view visualizing the conversation trace with the concierge delegating to the flight, hotel, and car-rental agents](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-04-trajectory.png)
+   ![The Trajectory view visualizing the conversation trace with the concierge delegating to the flight, hotel, and car-rental agents](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-trajectory.png)
 
 1. [] Click the **User View** tab, then **Play**. This is a time-based replay of
    which requests went to each agent, when, and how the final response was
    composed — giving you an intuitive sense of per-agent latency. Each agent's
    requests and responses stream in parallel before being merged into one reply.
 
-   ![The User View tab showing a time-based replay of requests to each agent](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-04-user-view.png)
+   ![The User View tab showing a time-based replay of requests to each agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
 
 >[!Knowledge] **Trajectory vs. User View** are two complementary lenses on the
 > same trace. You can pause the trace in one view, and resume in the other to see how they correlate for debugging etc..

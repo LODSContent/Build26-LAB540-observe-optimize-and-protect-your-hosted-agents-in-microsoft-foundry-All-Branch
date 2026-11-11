@@ -17,7 +17,7 @@ You'll drive the optimize loop by talking to **GitHub Copilot**, which uses the
    server** — choose **Yes**. This starts an authentication flow; **sign in with
    the same credential you used for Azure**.
 
-   ![The Foundry MCP server activation prompt and sign-in flow](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-03-mcp-activation.png)
+   ![The Foundry MCP server activation prompt and sign-in flow](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-mcp-activation.png)
 
 ## Select Chat Model
 
@@ -27,14 +27,14 @@ You'll drive the optimize loop by talking to **GitHub Copilot**, which uses the
 
 1. [] Set the chat **model** to **Claude Sonnet 5.5**.
 
-   ![Copilot Chat in Agent mode with the Foundry MCP enabled](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-03-open-copilot-chat.png)
+   ![Copilot Chat in Agent mode with the Foundry MCP enabled](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-open-copilot-chat.png)
 
 1. [] **Speed things up.** Below the Copilot Chat input box, select **Default permissions.**
 1. [] Select **Allow all** and then **Enable** to allow Copilot to run tool calls without asking for confirmation.
   
    **Default Approvals** control and switch it to **Bypass Approvals**. The Observe skill runs many steps, and this lets Copilot run tools without asking you to confirm each one. *If you start a new Copilot session, you will need to repeat this action to change the default*.
 
-   ![Switching from Default Approvals to Bypass Approvals in Copilot Chat](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-03-bypass-approvals.png)
+   ![Switching from Default Approvals to Bypass Approvals in Copilot Chat](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-bypass-approvals.png)
 
 
 ## Use Copilot To Recreate **.azure**

@@ -12,7 +12,7 @@ Your first tab is the **Azure Portal**, where your pre-provisioned resource grou
 1. [] If prompted to stay signed in, check **Don't show this again** and select
    **Yes**.
 
-   ![Azure portal home](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/skillable/images/01-setup-02-azure-portal-home.png)
+   ![Azure portal home](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-02-azure-portal-home.png)
 
 1. [] Select **Resource groups** in the portal to view the list of resource
    groups.  Maximize **Edge** if you do not see the **Resource groups**

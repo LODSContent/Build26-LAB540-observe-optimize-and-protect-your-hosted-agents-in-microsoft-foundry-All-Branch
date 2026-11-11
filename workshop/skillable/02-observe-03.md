@@ -10,7 +10,7 @@ Send a simple, single-specialist request and watch the metrics light up.
 1. [] Note the default response, the **log stream** of agent actions, the
    auto-evaluated **quality & safety metrics**, and the link to **traces** for this request.
 
-   ![The prompt 1 flight response with evaluator metrics in the playground](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-03-prompt1.png)
+   ![The prompt 1 flight response with evaluator metrics in the playground](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-prompt1.png)
 
 ## View Evaluation Metrics
 
@@ -18,7 +18,7 @@ Send a simple, single-specialist request and watch the metrics light up.
 1. [] Click on one of the metrics in the green box. It should open up a trace view as shown below. Note how the trace visualizes the sequence of actions within the flow along with token costs and latency per response.
 1. [] Note the **evaluations attached to the trace** — the actual scores for the selected quality metrics plus latency, token costs, and the events that produced this response. This lets you correlate metrics with the actions taken, for more effective debugging when needed.
 
-   ![The trace view with quality evaluations attached for the prompt 1 turn](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-03-trace.png)
+   ![The trace view with quality evaluations attached for the prompt 1 turn](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-trace.png)
 
 >[!Knowledge] **Evaluators** are automatic graders that score each response live
 > on quality and safety — no test code required. A **trace** is the step-by-step
@@ -33,12 +33,12 @@ Send a simple, single-specialist request and watch the metrics light up.
    a single pane of glass showing how many times it was called, tokens consumed,
    tools invoked, and failures across its lifetime.
 
-   ![The Monitor tab showing aggregated agent metrics and evaluations](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-03-monitor.png)
+   ![The Monitor tab showing aggregated agent metrics and evaluations](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-monitor.png)
 
 1. [] Click the **agent helper** icon within any chart to get an AI-generated
    analysis of that metric, surfacing insights into agent performance.
 
-   ![The Runs and token metrics chart with an AI-generated analysis of agent runs and token usage](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-03-monitor-analyze.png)
+   ![The Runs and token metrics chart with an AI-generated analysis of agent runs and token usage](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-monitor-analyze.png)
 
 >[!Knowledge] The **Monitor** tab is your single pane of glass in production. It
 > aggregates calls, token usage, tool invocations, and failures across the

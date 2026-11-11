@@ -16,7 +16,7 @@ keep it on task.
    topics instead of answering. If it doesn't, that's another area for agent
    optimization.
 
-   ![The concierge politely declining the out-of-scope request and redirecting to travel topics](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-05-prompt3.png)
+   ![The concierge politely declining the out-of-scope request and redirecting to travel topics](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-05-prompt3.png)
 
 >[!Knowledge] The concierge's **agent instructions** define its scope. Because
 > the instructions tell it to handle travel only, it refuses unrelated requests

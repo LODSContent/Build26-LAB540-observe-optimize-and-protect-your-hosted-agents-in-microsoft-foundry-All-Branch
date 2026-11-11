@@ -8,7 +8,7 @@ Before you run it, take a moment to understand what the **Observe skill** does.
 
 1. [] Read the summary it gives you. It may look like this:
 
-   ![Copilot Chat listing the microsoft-foundry skills and sub-skills](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-04-skills-summary.png)
+   ![Copilot Chat listing the microsoft-foundry skills and sub-skills](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-04-skills-summary.png)
 
 1. [] In this workshop you'll focus on the **observe** skill. If time permits, you can use the same deployed agent to explore the other skills with Copilot.
 

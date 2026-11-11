@@ -30,7 +30,7 @@ Take a moment to confirm your lab environment loaded correctly:
 1. [] Confirm you see an **Instructions** tab and a **Resources** tab in the lab interface.
 1. [] Confirm the virtual machine shows a **login screen**, as in the screenshot below.
 
-   ![Lab interface with Instructions and Resources tabs and the VM login screen](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/skillable/images/00-intro-lab-tabs-vm-login.png)
+   ![Lab interface with Instructions and Resources tabs and the VM login screen](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/00-intro-lab-tabs-vm-login.png)
 
 1. [] Click the **Resources** tab and verify it has the **Subscription**,
    **Username**, and **TAP** values filled in.
@@ -104,7 +104,7 @@ Your first tab is the **Azure Portal**, where your pre-provisioned resource grou
 1. [] If prompted to stay signed in, check **Don't show this again** and select
    **Yes**.
 
-   ![Azure portal home](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/skillable/images/01-setup-02-azure-portal-home.png)
+   ![Azure portal home](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-02-azure-portal-home.png)
 
 1. [] Select **Resource groups** in the portal to view the list of resource
    groups.  Maximize **Edge** if you do not see the **Resource groups**
@@ -207,12 +207,12 @@ meet your hosted agent.
 1. [] Select the **zava-concierge** agent to open it.
 
    <!-- Images are sourced from the self-guided tree to keep a single image set. -->
-   ![The Foundry portal showing the pre-deployed Zava Travel Concierge agent](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/01-setup-07-agent.png)
+   ![The Foundry portal showing the pre-deployed Zava Travel Concierge agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-07-agent.png)
 
 1. [] Click the agent name. An agent playground opens with three panels as shown. Click the highlighted toggles to hide or reveal the side panels. For now, close the left **details** panel but leave the right **logs** panel open.
 
 
-   ![The Zava Travel Concierge agent playground open in the Foundry portal](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-01-playground.png)
+   ![The Zava Travel Concierge agent playground open in the Foundry portal](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-01-playground.png)
 
 >[!Knowledge] The **playground** is a live chat against your deployed hosted
 > agent. Every message you send runs through the real concierge and its
@@ -233,7 +233,7 @@ Before you send the first prompt, let's turn on the **evaluators** so Foundry sc
 1. [] Enable all the built-in evaluators for the agent, then
    click to close.
 
-   ![The playground metrics panel with built-in evaluators enabled](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-02-metrics.png)
+   ![The playground metrics panel with built-in evaluators enabled](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-02-metrics.png)
 
 <br/>
 
@@ -258,7 +258,7 @@ Send a simple, single-specialist request and watch the metrics light up.
 1. [] Note the default response, the **log stream** of agent actions, the
    auto-evaluated **quality & safety metrics**, and the link to **traces** for this request.
 
-   ![The prompt 1 flight response with evaluator metrics in the playground](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-03-prompt1.png)
+   ![The prompt 1 flight response with evaluator metrics in the playground](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-prompt1.png)
 
 ## View Evaluation Metrics
 
@@ -266,7 +266,7 @@ Send a simple, single-specialist request and watch the metrics light up.
 1. [] Click on one of the metrics in the green box. It should open up a trace view as shown below. Note how the trace visualizes the sequence of actions within the flow along with token costs and latency per response.
 1. [] Note the **evaluations attached to the trace** — the actual scores for the selected quality metrics plus latency, token costs, and the events that produced this response. This lets you correlate metrics with the actions taken, for more effective debugging when needed.
 
-   ![The trace view with quality evaluations attached for the prompt 1 turn](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-03-trace.png)
+   ![The trace view with quality evaluations attached for the prompt 1 turn](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-trace.png)
 
 >[!Knowledge] **Evaluators** are automatic graders that score each response live
 > on quality and safety — no test code required. A **trace** is the step-by-step
@@ -281,12 +281,12 @@ Send a simple, single-specialist request and watch the metrics light up.
    a single pane of glass showing how many times it was called, tokens consumed,
    tools invoked, and failures across its lifetime.
 
-   ![The Monitor tab showing aggregated agent metrics and evaluations](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-03-monitor.png)
+   ![The Monitor tab showing aggregated agent metrics and evaluations](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-monitor.png)
 
 1. [] Click the **agent helper** icon within any chart to get an AI-generated
    analysis of that metric, surfacing insights into agent performance.
 
-   ![The Runs and token metrics chart with an AI-generated analysis of agent runs and token usage](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-03-monitor-analyze.png)
+   ![The Runs and token metrics chart with an AI-generated analysis of agent runs and token usage](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-monitor-analyze.png)
 
 >[!Knowledge] The **Monitor** tab is your single pane of glass in production. It
 > aggregates calls, token usage, tool invocations, and failures across the
@@ -312,7 +312,7 @@ specialists.
    includes flight, hotel, and car results, so all three specialists were called
    before composing the final answer.
 
-   ![The prompt 2 itinerary response combining flights, hotel, and car rental](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-04-prompt2.png)
+   ![The prompt 2 itinerary response combining flights, hotel, and car rental](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-prompt2.png)
 
 ## Explore Trace Viewer
 
@@ -323,14 +323,14 @@ specialists.
 1. [] **Trajectory** view visualizes this turns trace as a **conversation** — the concierge delegating
    to the flight, hotel, and car-rental agents. Click **Play** to watch it unfold, and check the metrics (top-right) for chat calls, tool calls, tokens, time, and **spans**.
 
-   ![The Trajectory view visualizing the conversation trace with the concierge delegating to the flight, hotel, and car-rental agents](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-04-trajectory.png)
+   ![The Trajectory view visualizing the conversation trace with the concierge delegating to the flight, hotel, and car-rental agents](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-trajectory.png)
 
 1. [] Click the **User View** tab, then **Play**. This is a time-based replay of
    which requests went to each agent, when, and how the final response was
    composed — giving you an intuitive sense of per-agent latency. Each agent's
    requests and responses stream in parallel before being merged into one reply.
 
-   ![The User View tab showing a time-based replay of requests to each agent](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-04-user-view.png)
+   ![The User View tab showing a time-based replay of requests to each agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
 
 >[!Knowledge] **Trajectory vs. User View** are two complementary lenses on the
 > same trace. You can pause the trace in one view, and resume in the other to see how they correlate for debugging etc..
@@ -364,7 +364,7 @@ keep it on task.
    topics instead of answering. If it doesn't, that's another area for agent
    optimization.
 
-   ![The concierge politely declining the out-of-scope request and redirecting to travel topics](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/02-observe-05-prompt3.png)
+   ![The concierge politely declining the out-of-scope request and redirecting to travel topics](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-05-prompt3.png)
 
 >[!Knowledge] The concierge's **agent instructions** define its scope. Because
 > the instructions tell it to handle travel only, it refuses unrelated requests
@@ -503,7 +503,7 @@ You'll drive the optimize loop by talking to **GitHub Copilot**, which uses the
    server** — choose **Yes**. This starts an authentication flow; **sign in with
    the same credential you used for Azure**.
 
-   ![The Foundry MCP server activation prompt and sign-in flow](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-03-mcp-activation.png)
+   ![The Foundry MCP server activation prompt and sign-in flow](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-mcp-activation.png)
 
 ## Select Chat Model
 
@@ -513,14 +513,14 @@ You'll drive the optimize loop by talking to **GitHub Copilot**, which uses the
 
 1. [] Set the chat **model** to **Claude Sonnet 5.5**.
 
-   ![Copilot Chat in Agent mode with the Foundry MCP enabled](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-03-open-copilot-chat.png)
+   ![Copilot Chat in Agent mode with the Foundry MCP enabled](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-open-copilot-chat.png)
 
 1. [] **Speed things up.** Below the Copilot Chat input box, select **Default permissions.**
 1. [] Select **Allow all** and then **Enable** to allow Copilot to run tool calls without asking for confirmation.
   
    **Default Approvals** control and switch it to **Bypass Approvals**. The Observe skill runs many steps, and this lets Copilot run tools without asking you to confirm each one. *If you start a new Copilot session, you will need to repeat this action to change the default*.
 
-   ![Switching from Default Approvals to Bypass Approvals in Copilot Chat](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-03-bypass-approvals.png)
+   ![Switching from Default Approvals to Bypass Approvals in Copilot Chat](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-bypass-approvals.png)
 
 
 ## Use Copilot To Recreate **.azure**
@@ -554,7 +554,7 @@ Before you run it, take a moment to understand what the **Observe skill** does.
 
 1. [] Read the summary it gives you. It may look like this:
 
-   ![Copilot Chat listing the microsoft-foundry skills and sub-skills](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-04-skills-summary.png)
+   ![Copilot Chat listing the microsoft-foundry skills and sub-skills](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-04-skills-summary.png)
 
 1. [] In this workshop you'll focus on the **observe** skill. If time permits, you can use the same deployed agent to explore the other skills with Copilot.
 
@@ -584,7 +584,7 @@ Now kick off the Observe skill and let it work.
 1. [] Confirm Copilot starts the Observe workflow (you'll see it begin creating
    files and calling Foundry tools).
 
-   ![Copilot Chat kicking off the Observe workflow with tool calls and files](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-05-start-observe.png)
+   ![Copilot Chat kicking off the Observe workflow with tool calls and files](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-05-start-observe.png)
 
 ---
 
@@ -611,7 +611,7 @@ As it runs, you'll see Copilot:
 It creates a plan of action and starts executing tasks to establish the baseline
 evaluation results, as shown below.
 
-![Copilot Chat creating tasks and running the baseline evaluation](https://raw.githubusercontent.com/microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/aiewf26-refresh/workshop/self-guided/images/03-optimize-06-init-tasks.png)
+![Copilot Chat creating tasks and running the baseline evaluation](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-init-tasks.png)
 
 >[!Alert] **Let it finish.** The baseline run and analysis take a few minutes.
 > Watch the updates stream in and **wait until the recommendations appear**
