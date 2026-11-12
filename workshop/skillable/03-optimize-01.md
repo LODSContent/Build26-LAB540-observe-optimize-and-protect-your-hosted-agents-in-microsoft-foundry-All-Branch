@@ -5,24 +5,32 @@ Your Codespace should be ready now. Switch to its tab (Tab 3) and let's move to 
 1. [] Switch to the **Codespace** tab. Wait until VS Code has fully loaded.
 1. [] If the **Codespace** has stopped after being idle, select **Restart** and wait for the **Codespace** to start. 
 1. [] Wait until **VS Code** has fully loaded. 
-1. [] If the **Do you trust the authors of the files in this folder?** prompt appears, select **Trust Folder** & **Continue** to proceed. 
+1. [] If the **Do you trust the authors of the files in this folder?** prompt appears, select **Trust Folder & Continue** to proceed. 
+
+   ![The VS Code dialog asking whether you trust the authors of the files in this folder, with the Trust Folder & Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-trust-folder.png)
 
 1. [] Open a terminal (**Terminal → New Terminal**).
-1. [] Confirm the core CLIs are present:
 
-   +++az version+++
+1. [] Copy and run each command below to verify the core CLIs are present:
 
-   +++azd version+++
+   ++az version++
 
-   +++python --version+++
+   ++azd version++
+
+   ++python --version++
 
 
 ## Reset to the clean baseline
 
 Clear any stale **.foundry** state and restore the baseline concierge prompt. This ensures every run starts from the same intentionally under-optimized prompt as everyone else:
 
-1. [] Type this command in the terminal to execute it:  +++rm -rf zava/src/zava-travel-concierge/.foundry+++
-1. [] Type this command to run script: +++bash zava/src/zava-travel-concierge/scripts/reset-instructions.sh+++
+1. [] Copy and run this command in the terminal to execute it:  
+
+   +++rm -rf zava/src/zava-travel-concierge/.foundry++
+
+1. [] Type this command to run script: 
+
+   ++bash zava/src/zava-travel-concierge/scripts/reset-instructions.sh++
 
 ## What **main.py** does
 

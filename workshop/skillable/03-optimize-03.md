@@ -3,7 +3,9 @@
 You'll drive the optimize loop by talking to **GitHub Copilot**, which uses the
 **Foundry MCP** and the **microsoft-foundry** skill to do the work.
 
-1. [] Open **Copilot Chat** (Ctrl+Alt+I) and switch to **Agent** mode.
+1. [] Open **Copilot Chat** (Ctrl+Alt+I). This opens a side panel in your VS Code view.
+
+1. [] Click the "+" button and select **Agent** mode (should be default)
 1. [] Say hello to confirm it's responding - wait till it's ready:
 
    +++Hello!+++

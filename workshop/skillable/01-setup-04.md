@@ -7,7 +7,8 @@ start it now and let it warm up while you explore the agent.
 ## Sign in to the Skillable GitHub org
 
 1. [] Open a **new tab** and navigate to
-   +++https://github.com/enterprises/skillable-events/sso+++
+   ++https://github.com/enterprises/skillable-events/sso++
+
 1. [] Select **Continue** and complete the sign-in process. You’ll be authenticated with the same lab credentials. 
 
 <!-- TODO screenshot: GitHub SSO Continue with GHE button -->
@@ -16,11 +17,11 @@ start it now and let it warm up while you explore the agent.
  
 ## Launch the Codespace
 
-1. [] Navigate to the workshop repo at +++https://aka.ms/build26/lab540/skillable+++
+1. [] Navigate to the workshop repo at ++https://aka.ms/build26/lab540/skillable++
 1. [] Select the green **Code** button, then the **Codespaces** tab.
-1. [] Select **Create new codespace** — a new tab opens and begins building.
+1. [] Select **Create codespace on main** — a new tab opens and begins building.
 
-<!-- TODO screenshot: Code button > Codespaces > Create new codespace -->
+   ![The Code button's Codespaces tab with the Create codespace on main button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-create-codespace.png)
 
 >[!Alert] **Don't wait for it to finish.** The Codespace can take several
 > minutes to build. Leave this tab open and continue to the next stage — you'll

@@ -91,7 +91,7 @@ your **GitHub Codespace**.
 
 Your first tab is the **Azure Portal**, where your pre-provisioned resource group lives.
 
-1. [] Click in the **address bar** of new tab to give it focus, then navigate to +++https://portal.azure.com+++
+1. [] Click in the **address bar** of new tab and navigate to ++https://portal.azure.com++ 
 1. [] Sign in with the lab credentials below:
 
    - **Username:** +++@lab.CloudPortalCredential(User1).Username+++
@@ -133,15 +133,20 @@ Your first tab is the **Azure Portal**, where your pre-provisioned resource grou
 Your second tab is the **Microsoft Foundry Portal**, where your hosted agent is
 deployed.
 
-1. [] Open a **new tab** in Edge. Click to focus and type +++https://ai.azure.com+++ as address.
+1. [] Open a **new tab** in Edge. Navigate to this address: ++https://ai.azure.com++ 
 1. [] Select the **Sign in** button to login with your credentials.
 1. [] After signing in, confirm that the **New Foundry** switch is enabled. If it isn't already active, toggle it on.
-1. [] On the **All resources** page, select the existing **ai-project-lab540-...** project.
-1. [] After the project opens, select **Agents** from the left navigation menu.
-1. [] Confirm that the existing **zava-concierge** agent is displayed. 
-1. [] Select the single project you see, then choose **Let's go**.
 
-<!-- TODO screenshot: Foundry portal home with New Foundry toggle on -->
+   ![The All resources page with the New Foundry toggle enabled](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-new-foundry-toggle.png)
+
+1. [] On the **All resources** page, select the existing **ai-project-lab540-...** project.
+
+   ![The Foundry project home page after selecting the ai-project-lab540 project](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-project-home.png)
+
+1. [] After the project opens, select **Agents** from the left navigation menu.
+1. [] Confirm that the existing **zava-concierge** agent is displayed.
+
+   ![The Agents page in the Foundry portal listing the running zava-concierge hosted agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-agents-list.png)
 
 <br/>
 
@@ -163,7 +168,8 @@ start it now and let it warm up while you explore the agent.
 ## Sign in to the Skillable GitHub org
 
 1. [] Open a **new tab** and navigate to
-   +++https://github.com/enterprises/skillable-events/sso+++
+   ++https://github.com/enterprises/skillable-events/sso++
+
 1. [] Select **Continue** and complete the sign-in process. You’ll be authenticated with the same lab credentials. 
 
 <!-- TODO screenshot: GitHub SSO Continue with GHE button -->
@@ -172,11 +178,11 @@ start it now and let it warm up while you explore the agent.
  
 ## Launch the Codespace
 
-1. [] Navigate to the workshop repo at +++https://aka.ms/build26/lab540/skillable+++
+1. [] Navigate to the workshop repo at ++https://aka.ms/build26/lab540/skillable++
 1. [] Select the green **Code** button, then the **Codespaces** tab.
-1. [] Select **Create new codespace** — a new tab opens and begins building.
+1. [] Select **Create codespace on main** — a new tab opens and begins building.
 
-<!-- TODO screenshot: Code button > Codespaces > Create new codespace -->
+   ![The Code button's Codespaces tab with the Create codespace on main button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-create-codespace.png)
 
 >[!Alert] **Don't wait for it to finish.** The Codespace can take several
 > minutes to build. Leave this tab open and continue to the next stage — you'll
@@ -199,17 +205,18 @@ start it now and let it warm up while you explore the agent.
 While your Codespace builds, switch to the **Foundry Portal** tab (Tab 2) and
 meet your hosted agent.
 
-1. [] In the Foundry Portal, click on the **Build** option in navigation bar.
-1. [] Next, click the **Agents** option in the left navigation.
-1. [] Select the **zava-concierge** agent to open it.
+1. [] Confirm you are on the **Agents** page from the previous step, with the **zava-concierge** agent listed. If not, select **Build** in the top navigation, then **Agents** in the left navigation.
 
-   <!-- Images are sourced from the self-guided tree to keep a single image set. -->
-   ![The Foundry portal showing the pre-deployed Zava Travel Concierge agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-07-agent.png)
+   ![The Agents page in the Foundry portal listing the running zava-concierge hosted agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-agents-list.png)
 
-1. [] Click the agent name. An agent playground opens with three panels as shown. Click the highlighted toggles to hide or reveal the side panels. For now, close the left **details** panel but leave the right **logs** panel open.
+1. [] Select **zava-concierge** to open the agent playground. It has three panels: **Setup** on the left, the chat in the middle, and **Log stream** on the right.
+1. [] Click the highlighted toggle to close the left **Setup** panel.
 
+   ![The zava-concierge agent playground with the Setup panel toggle highlighted](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-01-playground.png)
 
-   ![The Zava Travel Concierge agent playground open in the Foundry portal](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-01-playground.png)
+1. [] Leave the right **Log stream** panel open. The highlighted toggle shows where to hide it later — **don't click it now**; you'll use these logs in the next steps.
+
+   ![The playground with the Setup panel closed and the Log stream panel toggle highlighted](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-01-playground-logs.png)
 
 >[!Knowledge] The **playground** is a live chat against your deployed hosted
 > agent. Every message you send runs through the real concierge and its
@@ -389,7 +396,9 @@ Your Codespace should be ready now. Switch to its tab (Tab 3) and let's move to 
 1. [] Switch to the **Codespace** tab. Wait until VS Code has fully loaded.
 1. [] If the **Codespace** has stopped after being idle, select **Restart** and wait for the **Codespace** to start. 
 1. [] Wait until **VS Code** has fully loaded. 
-1. [] If the **Do you trust the authors of the files in this folder?** prompt appears, select **Trust Folder** & **Continue** to proceed. 
+1. [] If the **Do you trust the authors of the files in this folder?** prompt appears, select **Trust Folder & Continue** to proceed. 
+
+   ![The VS Code dialog asking whether you trust the authors of the files in this folder, with the Trust Folder & Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-trust-folder.png)
 
 1. [] Open a terminal (**Terminal → New Terminal**).
 1. [] Confirm the core CLIs are present:

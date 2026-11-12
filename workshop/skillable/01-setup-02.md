@@ -2,7 +2,7 @@
 
 Your first tab is the **Azure Portal**, where your pre-provisioned resource group lives.
 
-1. [] Click in the **address bar** of new tab to give it focus, then navigate to +++https://portal.azure.com+++
+1. [] Click in the **address bar** of new tab and navigate to ++https://portal.azure.com++ 
 1. [] Sign in with the lab credentials below:
 
    - **Username:** +++@lab.CloudPortalCredential(User1).Username+++

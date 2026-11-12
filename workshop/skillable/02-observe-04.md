@@ -3,9 +3,14 @@
 Now send a multi-part request that makes the concierge coordinate all three
 specialists.
 
+1. [] Click the Playground tab to return to playground.
+   - Click the "+" button (next to Metrics) to start a new chat.
+   - Click the toggle button on Log stream to close it.
+   - You should now see just the playground panel in focus.
+
 1. [] In the playground, send this prompt:
 
-   +++Plan a trip from Chicago to Rome for the first two weeks of November. I need flights, a hotel, and a car rental.+++
+   ++Plan a trip from Chicago to Rome for the first two weeks of November. I need flights, a hotel, and a car rental.++
 
 1. [] Wait for the concierge to compose the full itinerary — the response now
    includes flight, hotel, and car results, so all three specialists were called
@@ -31,11 +36,22 @@ specialists.
 
    ![The User View tab showing a time-based replay of requests to each agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
 
->[!Knowledge] **Trajectory vs. User View** are two complementary lenses on the
-> same trace. You can pause the trace in one view, and resume in the other to see how they correlate for debugging etc..
+
+1. [] (Optional) Click the **Graph View** tab, then **Play**. This shows the
+   trace as a node-and-edge graph. Each agent and tool is a node, and each edge
+   is a call or handoff between them. As the replay runs, nodes light up in
+   order, so you can see how the concierge connects to the flight, hotel, and
+   car-rental agents and which paths ran during this turn.
+
+
+1. [] Click the "X" to close the trace view dialog. Then click "Playground" to return to the playground view for the next step.
+
+>[!Knowledge] **Trajectory, User and Graph Views** are complementary lenses on the
+> same trace. You can switch views in the middle of a replay (or pause, switch, resume if preferred) to see how a specific moment appears in each for debugging etc..
 
 - The **Trajectory view** exposes the agent's internal orchestration how the concierge decomposed and delegated — so you can pinpoint *which* agent or tool call went wrong. Replays also give you an intuitive sense for latency by making you "see" delays between actions, or time spent in executing a tool call etc. 
 - The **User View** replays the interaction on a timeline, showing *when* each request fired, so you can spot the step responsible for latency. It also makes it easier to see how agents are streaming responses in parallel.
+- The **Graph View** maps the trace as a topology of agents and tools connected by calls and handoffs, so you can quickly see *who talked to whom* and spot unexpected, missing, or repeated paths in the orchestration.
 - Together they let you debug correctness and diagnose performance from a single captured trace — no re-running required.
 
 ---
