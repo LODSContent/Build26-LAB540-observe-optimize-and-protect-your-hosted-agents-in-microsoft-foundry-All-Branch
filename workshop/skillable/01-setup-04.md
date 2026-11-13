@@ -7,7 +7,7 @@ We will use **GitHub Codespace** as the development environment for this lab. It
 
 1. [] Open a new browser tab and navigate to +++https://github.com/enterprises/skillable-events/sso+++
 
-   ![The Single sign-on to Skillable Events page with the green Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-github-sso.png)
+   ![The Single sign-on to Skillable Events page with the green Continue button](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/01-setup-04-github-sso.png)
 
 1. [] Click **Continue**. You’ll be authenticated with the same Azure lab credentials. 
 
@@ -21,11 +21,11 @@ We will use **GitHub Codespace** as the development environment for this lab. It
 
 1. [] Click the green **Code** button for a drop down menu. Select the **Codespaces** tab and click the **Create codespace on main** button shown.
 
-   ![The Code button's Codespaces tab showing the Creating codespace button after it is selected](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-create-codespace.png)
+   ![The Code button's Codespaces tab showing the Creating codespace button after it is selected](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/01-setup-04-create-codespace.png)
 
 > **A new browser tab should open with a VS Code session loading.** This is your GitHub Codespaces tab. 
 
-![A new browser tab with VS Code in the browser showing Opening Remote and Building codespace while the Codespace starts](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-codespace-opening.png)
+![A new browser tab with VS Code in the browser showing Opening Remote and Building codespace while the Codespace starts](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/01-setup-04-codespace-opening.png)
 
 >[!Alert] **Don't wait for the page to load.** GitHub Codespaces can take several minutes to build. Leave this tab open and move to the next step. We'll come back here later in the lab to check if it is ready.
 

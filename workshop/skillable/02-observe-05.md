@@ -14,7 +14,7 @@ keep it on task.
 1. [] Confirm the concierge **politely declines** and redirects to travel
    topics instead of answering. 
 
-   ![The concierge politely declining the out-of-scope request and redirecting to travel topics](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-05-prompt3.png)
+   ![The concierge politely declining the out-of-scope request and redirecting to travel topics](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/02-observe-05-prompt3.png)
 
 
 >[!Hint] **What if the agent responds by doing the task?** This can be a signal for prompt optimization to tighten the guardrails. You can try a simple exercise to see if you can reinforce the rule and see what happens. 
