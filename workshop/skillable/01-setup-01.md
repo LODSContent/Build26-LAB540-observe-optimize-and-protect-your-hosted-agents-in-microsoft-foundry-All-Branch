@@ -1,22 +1,20 @@
 # Log Into VM, Launch Browser
 
-First, sign in to the lab VM, then open the browser. You'll work across three
-browser tabs during this lab: the **Azure Portal**, the **Foundry Portal**, and
-your **GitHub Codespace**.
+This lab uses the **Azure Portal**, the **Foundry Portal**, and **GitHub Codespace** in the browser. Let's get these set up first.
 
->[!Knowledge] Text shown +++like this+++ is **type text** — click it and it is typed into the VM at the current focus point, so you avoid typos. 
->
->[!Knowledge] Text shown ++like this++ is **copy text** — click to copy to clipboard, then paste it anywhere. _Useful for large inputs where type-text takes too long._
->
->[!Knowledge] Each step has a **checkbox** — tick it as you go to mark it done. The lab tracks these so you (and we) can see how far you've progressed.
+Some useful hints for doing this lab:
+
+>[!Hint] Text shown +++like this+++ is **type text**. Click to have it entered _automatically_ into the VM at the location in focus.
+
+>[!Hint] Text shown ++like this++ is **copy text**. Click to copy it to the clipboard. You will then paste it into the VM manually.
+
+>[!Hint] Each step has a **checkbox** to track progress. You can check multiple steps at once by checking just the last box in the sequence. _You will be prompted to verify this was intentional the first time. Confirm it._
 
 <br/>
 
 ## Sign in to the lab VM
 
-1. [] Click in the **password input** field in the VM to give it focus.
-
-1. [] Sign in using the password below:
+1. [] Click in the **password input** field in VM to give it focus. Then click the password item below to complete login.
 
    **Password:** +++@lab.VirtualMachine(Win11-Pro-Base).Password+++
 
@@ -26,16 +24,9 @@ your **GitHub Codespace**.
 
 ## Open the browser
 
-1. [] On the desktop, select the **Microsoft Edge** icon in the taskbar to
-   launch a new browser window.
+1. [] Click the **Microsoft Edge** icon on the VM desktop to launch a new browser window.
 
-<!-- TODO screenshot: Edge icon in the Windows taskbar -->
-
->[!Hint] Keep this browser window open for the rest of the lab — you'll add one
-> tab per step over the next three pages.
-
->[!Hint] Prefer dark mode? Click the **...** menu in the Edge toolbar, open
-> **Settings**, and switch the appearance to **dark**.
+Keep the browser open. We'll set up three browser tabs over the next three steps.
 
 <br/>
 

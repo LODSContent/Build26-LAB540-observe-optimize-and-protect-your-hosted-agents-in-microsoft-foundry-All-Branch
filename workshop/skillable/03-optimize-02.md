@@ -1,43 +1,60 @@
-# Sign in to Azure
+# Setup Codespaces Environment
 
-The optimize loop talks to your Foundry project from code, so sign in with both
-the Azure CLI (**az**) and the Azure Developer CLI (**azd**). You'll use **device
-code** sign-in to keep things simple inside the Codespace.
+We will be using a **code-first** approach to run the observability loop for agent optimization. To do this, we need to authenticate with Azure (to access our Foundry project) and set up our local environment variables (for code-first access).
+
+>[!Hint] If you see a popup anytime asking "Would you like to install Azure skills?" - go ahead and click the Install button.
 
 ## Sign in with **az**
 
-1. [] In the terminal, run:
+The Azure CLI is used to authenticate with Azure and provide the default credentials needed for code-first development.
 
-   +++az login --use-device-code+++
+1. [] Open a new terminal in VS Code. _You can also type "clear" to clear output in the existing terminal_.
 
-1. [] Open the verification URL, enter the code shown, and sign in with your lab
-   credentials:
+1. [] Copy this command and run it.
 
-   **Username:** +++@lab.CloudPortalCredential(User1).Username+++
-   **Password (TAP):** +++@lab.CloudPortalCredential(User1).AccessToken+++
+   ++az login --use-device-code++
 
-1. [] When prompted, select the default subscription.
+1. [] Follow the instructions shown by opening the verification URL and entering the code provided. Complete the authentication flow with existing login. (_If you need to sign in again, use the credentials from the **Resources** tab in your instructions panel_)
+
+1. [] Close the auth window and return to the VS Code terminal. Select the default subscription to complete the flow.
+
+1. [] Return to the Codespaces terminal. When prompted, select the default subscription. You are now logged in.
 
 ## Sign in with **azd**
 
-1. [] In the terminal, run:
+The Azure Developer CLI was used to provision our infrastructure. We will need it to retrieve and refresh our environment variables.
 
-   +++azd auth login --use-device-code+++
+1. [] Return to the VS Code terminal.
 
-1. [] Complete the same device-code sign-in flow.
+1. [] Copy this command and run it.
 
-<!-- TODO screenshot: device code sign-in prompt -->
+   ++azd auth login --use-device-code++
+
+1. [] Follow instructions to complete the authentication flow.
+
 
 ## Setup **.env** in Codespaces
 
-Run the script to automatically have your **.env** created from the deployed infrastructure.
+We can now use _azd_ to set up our local environment variables.
 
-1. [] Type this command in the terminal to execute it:  +++bash scripts/discover-env.sh+++
-1. [] You will be prompted for the name of the resource group to use. Enter the resource group name you see in the Azure portal tab. It should start with **rg-lab540-**.
+
+1. [] Return to the VS Code terminal. _Use "clear" to clear terminal output before you begin_.
+
+1. [] Copy this command and run it.
+
+   +++bash scripts/discover-env.sh+++
+
+1. [] You will be prompted for the resource group name. Switch to the Azure portal tab and copy the resource group name you see.
+
+   ![The Azure portal resource group overview with the rg-lab540 resource group name highlighted for copying](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-02-resource-group.png)
+
+1. [] Return to the VS Code terminal and paste it as the response and wait for the script to finish.
 
 >[!Alert] If you try to copy-paste the value into the terminal, you will get a pop-up asking permission to **read from and write to the clipboard**. Select **Allow** — you will need this for future copy-paste actions.
 
-1. Wait till the script is complete. Verify that a **.env** was setup with all required parameters filled in.
+1. [] Verify that a **.env** was created with all required parameters filled in.
+
+   ![The .env file open in VS Code with AZURE_RESOURCE_GROUP filled in, and the terminal showing discover-env.sh reporting that all environment variables are set](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-02-env.png)
 
 >[!Knowledge] This *.env* will be used by GitHub Copilot in a subsequent step to establish our *.azure* configuration for the Azure Developer CLI tooling.
 

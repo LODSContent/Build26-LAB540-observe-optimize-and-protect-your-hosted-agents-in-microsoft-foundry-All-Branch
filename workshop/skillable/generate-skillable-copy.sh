@@ -7,13 +7,15 @@
 #
 # It picks up every NN-*.md page file (in sorted order), excludes README.md,
 # and emits one [!include[](raw-url)] directive per page, separated by ===.
+# It also rebuilds README.md as the full lab: all pages concatenated in order.
 #
 # Branch is taken from BRANCH env var, falling back to the current git branch.
+# Repo is taken from REPO env var (owner/name), defaulting to the microsoft repo.
 set -euo pipefail
 
 cd "$(dirname "$0")"
 
-REPO="microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry"
+REPO="${REPO:-microsoft/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry}"
 BRANCH="${BRANCH:-$(git rev-parse --abbrev-ref HEAD)}"
 RAW_BASE="https://raw.githubusercontent.com/${REPO}/${BRANCH}/workshop/skillable"
 OUT=".skillable-copy.md"
@@ -36,9 +38,12 @@ fi
   (Edit Instructions). Skillable pulls each page live from this GitHub repo, in
   order, separated by the === page break.
 
+  Source repo:   ${REPO}
   Source branch: ${BRANCH}
-  To target a different branch: BRANCH=<branch> ./generate-skillable-copy.sh
+  To target a different repo/branch: REPO=<owner/name> BRANCH=<branch> ./generate-skillable-copy.sh
 -->
+
+@lab.Title
 EOF
 
   first=1
@@ -53,3 +58,20 @@ EOF
 } > "$OUT"
 
 echo "Wrote $OUT with ${#PAGES[@]} pages (branch: $BRANCH)."
+
+# README.md is the full lab: every page's content concatenated in order.
+README="README.md"
+{
+  printf '@lab.Title\n\n'
+  first=1
+  for page in "${PAGES[@]}"; do
+    if [ "$first" -eq 1 ]; then
+      first=0
+    else
+      printf '\n===\n\n'
+    fi
+    cat "$page"
+  done
+} > "$README"
+
+echo "Wrote $README combining ${#PAGES[@]} pages."
