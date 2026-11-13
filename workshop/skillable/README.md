@@ -555,53 +555,60 @@ You'll drive the optimize loop by talking to **GitHub Copilot**, which uses the
 
    +++Hello!+++
 
-## Enable Foundry MCP Server
-
-1. [] Make sure the **Foundry MCP server** is enabled (check the tools/MCP
-   picker in Copilot Chat).
-
-   When you say hello, the chat will prompt you to **activate the Foundry MCP
-   server** — choose **Yes**. This starts an authentication flow; **sign in with
-   the same credential you used for Azure**.
-
-   ![The Foundry MCP server activation prompt and sign-in flow](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-mcp-activation.png)
-
-## Select Chat Model
-
->[!Alert] You may see Copilot try to enforce a different model (e.g., **Codestral** or **Fable**) as the default model
-> and show an error related to downloads. Just dismiss these — **start a new chat session** and explicitly
-> pick **Claude Sonnet 5.5** as the model.
-
-1. [] Set the chat **model** to **Claude Sonnet 5.5**.
-
-   ![Copilot Chat in Agent mode with the Foundry MCP enabled](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-open-copilot-chat.png)
-
-1. [] **Speed things up.** Below the Copilot Chat input box, select **Default permissions.**
-1. [] Select **Allow all** and then **Enable** to allow Copilot to run tool calls without asking for confirmation.
-  
-   **Default Approvals** control and switch it to **Bypass Approvals**. The Observe skill runs many steps, and this lets Copilot run tools without asking you to confirm each one. *If you start a new Copilot session, you will need to repeat this action to change the default*.
-
-   ![Switching from Default Approvals to Bypass Approvals in Copilot Chat](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-bypass-approvals.png)
-
-
-## Use Copilot To Recreate **.azure**
-
-Our infrastructure was _pre-provisioned_ by the Azure Developer CLI (azd) using the code under the **zava/** folder. We will need to _redeploy_ this during the optimize loop — but we lack the default **.azure** folder with the default configuration information.
-
-Let's ask Copilot to help us recreate it before we begin optimization.
-
-- [] Click to **copy and paste** this prompt into Copilot Chat: ++I just recreated the .env file for this project. I previously deployed my agent to this resource group from the zava/ folder Use "azd init" and "azd ai agent init --project-id" to refresh the "zava/.azure/" folder from my azd provisioned project. Set ENABLE_CAPABILITY_HOST="false" and ENABLE_HOSTED_AGENTS="true". Make sure these variables are also defined: AZURE_SUBSCRIPTION_ID, AZURE_TENANT_ID,  AZURE_AI_PROJECT_NAME, AZURE_AI_PROJECT_ID, AZURE_AI_PROJECT_ENDPOINT, AZURE_AI_PROJECT_ACR_CONNECTION_NAME,  AZURE_AI_FOUNDRY_PROJECT_ID, FOUNDRY_PROJECT_ENDPOINT, AZURE_ENV_NAME, AZURE_LOCATION, AZURE_OPENAI_ENDPOINT, and AZURE_RESOURCE_GROUP++
-- [] Verify that the **zava/.azure** folder is created and that a subfolder exists for the **rg-lab540-XXX** environment for your deployed project.
-
->[!Hint] The **azd** tool is evolving rapidly which means we may still encounter errors or undocumented behaviors. That's okay. GitHub Copilot is equipped with the right context (via MCP servers) to figure out alternative ways to get the task completed. Just give it time to finish.
+   ![Copilot Chat after saying hello, showing the MCP authentication required prompt for the Foundry MCP server with an Authenticate button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-copilot-hello.png)
 
 
 >[!Alert] If GitHub Copilot execution itself fails for any reason, raise your hand and ask a proctor for help.
 
+
+
+## Enable Foundry MCP Server
+
+1. [] When you say hello, you will be prompted to authenticate with the Foundry MCP server as shown above.
+
+1. [] Click the button to complete the flow using the same Azure credential as before. Close that dialog when prompted and return to GitHub Codespaces to continue.
+
+Your Copilot chat will look like this:
+
+   ![Copilot Chat after authenticating, replying to hello with a summary of how it can help with the repository](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-mcp-activation.png)
+
+>[!Hint] If you did not see the Authenticate button, or missed responding to it, you can do so manually:
+> First, ensure the Foundry Toolkit Extension is installed. Then, use the Command Palette and search for "MCP: List Servers". It should show the _microsoft foundry_ server option listed with status (Running or Stopped). If "Stopped" just click on it and select the "Start Server" option to trigger the auth flow.
+
+
+## Select Chat Model
+
+Pick a good model to use with GitHub Copilot to ensure the skills run correctly.
+
+1. [] Set the chat **model** to **Claude Sonnet 5.5**.
+
+   ![The Copilot Chat model picker open with the cursor on Claude Sonnet 5.5](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-open-copilot-chat.png)
+
+1. [] **Speed things up.** Below the Copilot Chat input box, select **Default permissions.** Set it to **Allow all**. Click **Enable** in the pop-up dialog. This allows Copilot to run tool calls without asking for confirmation each time. *If you start a new Copilot session, you will need to repeat this action to change the default*.
+
+   ![The Copilot Chat permissions menu open below the input box, showing Manual, Assisted, and Allow all options](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-bypass-approvals.png)
+
+
+## Use Copilot To Recreate **.azure**
+
+Our infrastructure was _pre-provisioned_ by the Azure Developer CLI (azd) outside codespaces. We need to restore the _.azure_ environment information that would have existed if we had provisioned it manually. GitHub Copilot can help us restore it.
+
+- [] Copy the prompt below into the Copilot chat window
+
+++I just recreated the .env file for this project. I previously deployed my agent to this resource group from the zava/ folder Use "azd init" and "azd ai agent init --project-id" to refresh the "zava/.azure/" folder from my azd provisioned project. Set ENABLE_CAPABILITY_HOST="false" and ENABLE_HOSTED_AGENTS="true". Make sure these variables are also defined: AZURE_SUBSCRIPTION_ID, AZURE_TENANT_ID,  AZURE_AI_PROJECT_NAME, AZURE_AI_PROJECT_ID, AZURE_AI_PROJECT_ENDPOINT, AZURE_AI_PROJECT_ACR_CONNECTION_NAME,  AZURE_AI_FOUNDRY_PROJECT_ID, FOUNDRY_PROJECT_ENDPOINT, AZURE_ENV_NAME, AZURE_LOCATION, AZURE_OPENAI_ENDPOINT, and AZURE_RESOURCE_GROUP++
+
+
+![The .azure recreation prompt pasted into the Copilot Chat input box with Claude Sonnet 5.5 and Allow all selected](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-azure-prompt.png)
+
+- [] Verify that the **zava/.azure** folder is created and that a subfolder exists for the **rg-lab540-XXX** environment for your deployed project.
+
+   ![The VS Code Explorer showing the new zava/.azure folder with an lab540 environment subfolder containing .env and config.json, while Copilot runs azd ai agent init](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-azure-created.png)
+
+>[!Hint] If you run into any issues at any time, start by asking GitHub Copilot to debug for you. Because it has access to the Foundry MCP server and Microsoft Learn docs, it can take advantage of the latest informtion and best practices to resolve it for you.
+
 ---
 
-> ✅ **Success:** Copilot is in Agent mode, the Foundry MCP is enabled, the model
-> is set, and approvals are bypassed.
+> ✅ **Success:** Copilot is in Agent mode, the Foundry MCP is enabled, the model is set, and approvals are bypassed.
 
 ===
 
@@ -611,15 +618,18 @@ Before you run it, take a moment to understand what the **Observe skill** does.
 
 1. [] First check that copilot chat has the _microsoft-foundry_ skill. Type "/microsoft-" in the chat and see if it finds the skill in that list.
 
-1. [] Ask Copilot to explain the skill:
+   ![Typing /microsoft- in Copilot Chat lists the microsoft-foundry skill in the autocomplete menu](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-04-skill-picker.png)
+
+1. [] Ask Copilot to explain the observe skill:
 
    +++/microsoft-foundry Tell me about what the observe sub-skill does for agents.+++
 
 1. [] Read the summary it gives you. It may look like this:
 
-   ![Copilot Chat listing the microsoft-foundry skills and sub-skills](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-04-skills-summary.png)
+   ![Copilot Chat summarizing the observe sub-skill as an eval-driven optimization loop for Foundry agents](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-04-skills-summary.png)
 
-1. [] In this workshop you'll focus on the **observe** skill. If time permits, you can use the same deployed agent to explore the other skills with Copilot.
+
+>[!Alert] Note that these skills are constantly updated. If a missing dependency is detected (as shown above) Copilot will automatically debug and resolve it for you. _Just wait for it to complete the step_.
 
 >[!Knowledge] The **microsoft-foundry Observe skill** automates the evaluation
 > lifecycle for your hosted agent. In one workflow it:
@@ -636,7 +646,7 @@ Before you run it, take a moment to understand what the **Observe skill** does.
 
 ===
 
-# Run the Skill
+# Run the Observe Skill
 
 Now kick off the Observe skill and let it work.
 
@@ -647,7 +657,7 @@ Now kick off the Observe skill and let it work.
 1. [] Confirm Copilot starts the Observe workflow (you'll see it begin creating
    files and calling Foundry tools).
 
-   ![Copilot Chat kicking off the Observe workflow with tool calls and files](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-05-start-observe.png)
+   ![Copilot Chat starting the Observe workflow after the /microsoft-foundry prompt, running azd extension dependency checks in the chat](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-05-start-observe.png)
 
 ---
 
@@ -655,21 +665,32 @@ Now kick off the Observe skill and let it work.
 
 ===
 
-# Watch Baseline
+# Watch Skill In Action
 
 Watch the Observe skill work. This is **code-first optimization** — the same
 loop you saw in the portal, now driven from your editor.
 
+
+## GitHub Copilot Session
+
 As it runs, you'll see Copilot:
 
-1. [] Create a **.foundry** folder with the generated evaluators and test
-   dataset.
+1. [] Create a **.foundry** folder with the generated evaluators and test dataset.
 
 >[!Hint] Once the **.foundry** folder appears, open **zava/src/zava-travel-concierge/.foundry/agent-metadata.yaml**
 > in the editor. Leave it open — it updates as the loop runs and gives you a
 > live view of the observe loop's progress.
+
+![The .foundry folder in the Explorer with agent-metadata.yaml open in the editor, showing the baseline evaluation suite, while Copilot runs the Observe workflow in the chat panel](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-agent-metadata.png)
+
+
 1. [] Run a **baseline evaluation** of your deployed agent against that dataset.
+
+   ![agent-metadata.yaml showing the completed baseline evaluation with a pass/fail summary per evaluator, and Copilot Chat summarizing the baseline results](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-baseline-complete.png)
+
 1. [] Produce a set of **recommendations** based on the failures it found.
+
+   ![Copilot Chat showing the baseline evaluator pass/fail table, failure clusters with root causes, and ranked next-step recommendations](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-recommendations.png)
 
 It creates a plan of action and starts executing tasks to establish the baseline
 evaluation results, as shown below.
@@ -677,16 +698,27 @@ evaluation results, as shown below.
 ![Copilot Chat creating tasks and running the baseline evaluation](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-init-tasks.png)
 
 
+## Foundry Portal Assets (Optional)
 
-1. **Optional:** Want to see the artifacts of this run? Switch to the Foundry Portal tab.
+Want to see the artifacts of this run? Switch to the Foundry Portal tab.
 
    1. [] Verify you are in the Build tab. 
+
    1. Click on **Data** in the sidebar. You should see ann _eval-data-xxx_ dataset uploaded by the skill.
+
+      ![The Foundry Data page listing the eval-data dataset uploaded by the skill](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-data.png)
+
    1. Click on **Evaluations** in the sidebar. You should see a _dev-zava-xxx_ evaluation run in progress, initiated by the skill. _Note: You can also get to this directly from the Agent's Evaluations tab as well_.
+
+      ![The Foundry Evaluations page showing the dev-zava-concierge-baseline-smoke run in progress](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-evaluations.png)
+
    1. Click through to the details view of that run. You should be able to monitor progress and see the overall metrics and detailed metrics results (once run completes). 
 
+      ![The completed baseline evaluation run details with overall metrics for latency, tokens, task completion, coherence, and indirect attack, and per-query results below](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-run-details.png)
 
->[!Alert] **Let it finish.** The baseline run and analysis take a few minutes.
+
+>[!Alert] **Let the skill run finish.** The baseline run and analysis take a few minutes.
+
 > Watch the updates stream in and **wait until the recommendations appear**
 > before moving on.
 
@@ -703,15 +735,18 @@ The skill has handed you a ranked list of recommendations. Now choose the one to
 apply.
 
 1. [] Review the recommendations Copilot produced.
+
 1. [] Ask for the leading fix if you want it called out:
 
    +++What's the top recommendation, and what change does it propose?+++
+
+   ![Copilot Chat answering that the top recommendation is to fix the seed dataset before changing the agent, explaining why and which file it proposes to edit](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-07-top-recommendation.png)
 
 1. [] Tell Copilot to apply that fix:
 
    +++Apply the top recommendation and optimize the agent's instructions.+++
 
-<!-- TODO screenshot: recommendations list with top fix selected -->
+   ![Copilot Chat starting to apply the top recommendation by reading the optimize references and the agent's current instructions](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-07-apply-fix.png)
 
 >[!Knowledge] The recommendations are a **hypothesis generator**, not an oracle.
 > Picking the top fix and measuring the result is exactly how the optimize loop
@@ -733,10 +768,15 @@ As it runs, you'll see Copilot:
 1. [] Update the agent's **instructions** with the optimized version.
 1. [] **Redeploy** the hosted agent (rebuild + push, then publish a new
    revision).
+
+   ![Copilot Chat redeploying the hosted agent with azd deploy to create a new version, with agent-metadata.yaml open in the editor](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-08-redeploy.png)
+
 1. [] Optionally **re-evaluate** against the same dataset to compare before and
    after.
 
-<!-- TODO screenshot: redeploy + comparison output in chat -->
+When the loop finishes, Copilot summarizes what changed, what it fixed along the way, and offers **next steps** (e.g., roll back, fix the prompt and re-evaluate, or keep the new version). Pick one to keep iterating.
+
+![Copilot Chat summarizing the optimize run, including deployment fixes and a decision with options to roll back, fix the prompt and re-evaluate, or keep the new version](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-08-next-steps.png)
 
 >[!Knowledge] Improvement isn't guaranteed on every pass — a regression is
 > **data**, telling you which axis you traded off. The value is the feedback

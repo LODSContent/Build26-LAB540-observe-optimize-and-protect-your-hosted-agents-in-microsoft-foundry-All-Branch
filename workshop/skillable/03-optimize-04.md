@@ -4,15 +4,18 @@ Before you run it, take a moment to understand what the **Observe skill** does.
 
 1. [] First check that copilot chat has the _microsoft-foundry_ skill. Type "/microsoft-" in the chat and see if it finds the skill in that list.
 
-1. [] Ask Copilot to explain the skill:
+   ![Typing /microsoft- in Copilot Chat lists the microsoft-foundry skill in the autocomplete menu](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-04-skill-picker.png)
+
+1. [] Ask Copilot to explain the observe skill:
 
    +++/microsoft-foundry Tell me about what the observe sub-skill does for agents.+++
 
 1. [] Read the summary it gives you. It may look like this:
 
-   ![Copilot Chat listing the microsoft-foundry skills and sub-skills](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-04-skills-summary.png)
+   ![Copilot Chat summarizing the observe sub-skill as an eval-driven optimization loop for Foundry agents](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-04-skills-summary.png)
 
-1. [] In this workshop you'll focus on the **observe** skill. If time permits, you can use the same deployed agent to explore the other skills with Copilot.
+
+>[!Alert] Note that these skills are constantly updated. If a missing dependency is detected (as shown above) Copilot will automatically debug and resolve it for you. _Just wait for it to complete the step_.
 
 >[!Knowledge] The **microsoft-foundry Observe skill** automates the evaluation
 > lifecycle for your hosted agent. In one workflow it:
