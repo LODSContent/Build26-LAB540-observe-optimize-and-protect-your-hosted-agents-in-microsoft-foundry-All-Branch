@@ -1,18 +1,26 @@
-# Open Codespace
+# Return to Codespace
 
-Your Codespace should be ready now. Switch to its tab (Tab 3) and let's move to code-first observabilty.
+Your Github Codespace should be ready by now. Switch back to that tab and let's move to **code-first observabilty.**
 
-1. [] Switch to the **Codespace** tab. Wait until VS Code has fully loaded.
-1. [] If the **Codespace** has stopped after being idle, select **Restart** and wait for the **Codespace** to start. 
-1. [] Wait until **VS Code** has fully loaded. 
-2. [] Verify that the Foundry Toolkit extension is installed. _The icon should be the last one in the sidebar. It may sometimes not be rendered though it is present - so hover over the space to see if "Foundry Toolkit" tip shows. **This is required for Foundry MCP server access later**.
-1. [] If the **Do you trust the authors of the files in this folder?** prompt appears, select **Trust Folder & Continue** to proceed. 
+1. [] Verify that you see something like this. This shows the Codespaces is loaded and ready. Click **Trust Folder & Continue** to dismiss the dialog. 
 
    ![The VS Code dialog asking whether you trust the authors of the files in this folder, with the Trust Folder & Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-trust-folder.png)
 
+1. [] Verify that the Foundry Toolkit (FTK) extension is installed by checking the VS Code sidebar. This is required to use the **Foundry MCP Server**. _Note: As shown, the FTK icon may sometimes not be rendered correctly - hover over the spot to see if the extension exists_.
+
+   ![The VS Code sidebar with the Foundry Toolkit icon highlighted and its tooltip shown](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-foundry-toolkit.png)
+
+>[!Hint] If the Codespace had stopped (idle timeout), select restart or reload the tab and wait till it loads completely. It should take just a minute or so this time.
+
+>[!Hint] If the FTK extension is not installed, call a proctor to ask for help installing it manually.
+
+<br/>
+
+## Validate Environment
+
 1. [] Open a terminal (**Terminal → New Terminal**).
 
-1. [] Copy and run each command below to verify the core CLIs are present:
+1. [] Copy and paste each command below in the terminal to verify commandline tools are installed:
 
    ++az version++
 
@@ -21,19 +29,19 @@ Your Codespace should be ready now. Switch to its tab (Tab 3) and let's move to 
    ++python --version++
 
 
-## Reset to the clean baseline
+## Reset the baseline
 
-Clear any stale **.foundry** state and restore the baseline concierge prompt. This ensures every run starts from the same intentionally under-optimized prompt as everyone else:
+The _.foundry/_ folder contains state from previous Foundry skills runs. Run these commands to clear any stale state so you start at the same intentionally under-optimized prompt as everyone else:
 
-1. [] Copy and run this command in the terminal to execute it:  
+1. [] Run this command in the terminal to remove stale folders. 
 
    +++rm -rf zava/src/zava-travel-concierge/.foundry+++
 
-1. [] Type this command to run script: 
+1. [] Run this command to reset instructions.
 
    ++bash zava/src/zava-travel-concierge/scripts/reset-instructions.sh++
 
-## What **main.py** does
+## Study the agent (**main.py**)
 
 1. [] Open the agent's source file **zava/src/zava-travel-concierge/main.py** and skim it. This is the agent you've been observing — and the code the optimize loop will change.
 1. [] Read the description below to understand the components that make up our **zava-concierge** hosted agent.
