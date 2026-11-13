@@ -2,9 +2,11 @@
 
 Before you run it, take a moment to understand what the **Observe skill** does.
 
+1. [] First check that copilot chat has the _microsoft-foundry_ skill. Type "/microsoft-" in the chat and see if it finds the skill in that list.
+
 1. [] Ask Copilot to explain the skill:
 
-   +++Tell me about the microsoft-foundry skill and what the observe sub-skill does in this context.+++
+   ++/microsoft-foundry Tell me about what the observe sub-skill does for agents.+++
 
 1. [] Read the summary it gives you. It may look like this:
 

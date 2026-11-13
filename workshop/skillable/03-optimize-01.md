@@ -5,6 +5,7 @@ Your Codespace should be ready now. Switch to its tab (Tab 3) and let's move to 
 1. [] Switch to the **Codespace** tab. Wait until VS Code has fully loaded.
 1. [] If the **Codespace** has stopped after being idle, select **Restart** and wait for the **Codespace** to start. 
 1. [] Wait until **VS Code** has fully loaded. 
+2. [] Verify that the Foundry Toolkit extension is installed. _The icon should be the last one in the sidebar. It may sometimes not be rendered though it is present - so hover over the space to see if "Foundry Toolkit" tip shows. **This is required for Foundry MCP server access later**.
 1. [] If the **Do you trust the authors of the files in this folder?** prompt appears, select **Trust Folder & Continue** to proceed. 
 
    ![The VS Code dialog asking whether you trust the authors of the files in this folder, with the Trust Folder & Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-trust-folder.png)

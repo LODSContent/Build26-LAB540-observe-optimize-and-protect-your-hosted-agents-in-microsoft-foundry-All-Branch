@@ -4,9 +4,9 @@ Now send a multi-part request that makes the concierge coordinate all three
 specialists.
 
 1. [] Click the Playground tab to return to playground.
-   - Click the "+" button (next to Metrics) to start a new chat.
-   - Click the toggle button on Log stream to close it.
-   - You should now see just the playground panel in focus.
+   - Click "+" (next to Metrics) to start a new chat.
+   - Click the "→" on Logstream pane to close it.
+   - You now see just the playground panel in focus.
 
 1. [] In the playground, send this prompt:
 
@@ -32,7 +32,7 @@ specialists.
 1. [] Click the **User View** tab, then **Play**. This is a time-based replay of
    which requests went to each agent, when, and how the final response was
    composed — giving you an intuitive sense of per-agent latency. Each agent's
-   requests and responses stream in parallel before being merged into one reply.
+   requests and responses stream in parallel before being merged into one reply. (Click the → to expand the Span tree view to the left if you want to see replay across both user and trajectory views)
 
    ![The User View tab showing a time-based replay of requests to each agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
 

@@ -4,7 +4,7 @@
 
 Welcome to **LAB540**! You're about to take the **Zava Travel Concierge** — a multi-agent travel planner running as a **Hosted Agent** on **Microsoft Foundry** — and make it observable, measurable, and better.
 
->[!Knowledge] **Meet the agent.** Zava Travel's concierge coordinates three specialist sub-agents — **flights**, **hotels**, and **car rentals** — each grounded in its own data. The concierge never answers from its own knowledge; it delegates to the specialists and composes the itinerary.
+>[!Knowledge] **Meet the agent.** Zava Travel's concierge coordinates three specialist sub-agents — *flights*, *hotels*, and *car rentals* — each grounded in its own data. The concierge never answers from its own knowledge; it delegates to the specialists and composes the itinerary.
 
 <br/>
 
@@ -12,9 +12,9 @@ Welcome to **LAB540**! You're about to take the **Zava Travel Concierge** — a 
 
 This lab runs in three short stages:
 
-1. **Setup** &nbsp;•&nbsp; Get the infrastructure and your Codespace ready.
-2. **Observe** &nbsp;•&nbsp; Explore the hosted agent in the playground and learn Foundry's built-in observability features.
-3. **Optimize** &nbsp;•&nbsp; Run the eval → fix → redeploy loop with Microsoft Foundry Skills and GitHub Copilot.
+1. **Setup** - Get the infrastructure and your Codespace ready.
+2. **Observe** - Explore the hosted agent in the playground. Learn Foundry's built-in observability features.
+3. **Optimize** - Run the eval → fix → redeploy loop with Microsoft Foundry Skills and GitHub Copilot.
 
 >[!Note] **Level:** 200–300 &nbsp;•&nbsp; **Duration:** 60 minutes
 
@@ -22,43 +22,37 @@ This lab runs in three short stages:
 
 ## Before you start
 
-Take a moment to confirm your lab environment loaded correctly:
+Check that your lab environment loaded correctly as shown in the image:
 
-1. [] Confirm you see an **Instructions** tab and a **Resources** tab in the lab interface.
-1. [] Confirm the virtual machine shows a **login screen**, as in the screenshot below.
+1. [] You see the **Instructions** and  **Resources** tabs at right.
+1. [] You see the **login screen** for the virtual machine at left.
 
    ![Lab interface with Instructions and Resources tabs and the VM login screen](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/00-intro-lab-tabs-vm-login.png)
 
-1. [] Click the **Resources** tab and verify it has the **Subscription**,
-   **Username**, and **TAP** values filled in.
+1. [] Click the **Resources** tab. Verify it has **Subscription**, **Username**, and **TAP** values filled in.
 1. [] Switch back to the **Instructions** tab to continue.
 
-
-<br/>
-
->[!Alert] If you don't see these, raise your hand and ask a proctor for help before continuing.
+>[!Alert] If you don't see these values filled in, raise your hand and ask a proctor for help before continuing.
 
 ===
 
 # Log Into VM, Launch Browser
 
-First, sign in to the lab VM, then open the browser. You'll work across three
-browser tabs during this lab: the **Azure Portal**, the **Foundry Portal**, and
-your **GitHub Codespace**.
+This lab uses the **Azure Portal**, the **Foundry Portal**, and **GitHub Codespace** in the browser. Lets get these setup first.
 
->[!Knowledge] Text shown +++like this+++ is **type text** — click it and it is typed into the VM at the current focus point, so you avoid typos. 
->
->[!Knowledge] Text shown ++like this++ is **copy text** — click to copy to clipboard, then paste it anywhere. _Useful for large inputs where type-text takes too long._
->
->[!Knowledge] Each step has a **checkbox** — tick it as you go to mark it done. The lab tracks these so you (and we) can see how far you've progressed.
+Some useful hints for doing this lab:
+
+>[!Hint] Text shown +++like this+++ is **type text**. Click to have it entered into the VM  _automatically_ into the VM at the location in focus.
+
+>[!Hint] Text shown ++like this++ is **copy text**. Click to copy it to the clipboard. You will then paste into VM location manually.
+
+>[!Hint] Each step has a **checkbox** to track progress. You can check multiple steps at once by checking just the last box in the sequence. _You will be prompted to verify this was intentional the first time. Confirm it._
 
 <br/>
 
 ## Sign in to the lab VM
 
-1. [] Click in the **password input** field in the VM to give it focus.
-
-1. [] Sign in using the password below:
+1. [] Click in the **password input** field in VM to give it focus. Then click the password item below to complete login.
 
    **Password:** +++@lab.VirtualMachine(Win11-Pro-Base).Password+++
 
@@ -68,16 +62,9 @@ your **GitHub Codespace**.
 
 ## Open the browser
 
-1. [] On the desktop, select the **Microsoft Edge** icon in the taskbar to
-   launch a new browser window.
+1. [] Click the **Microsoft Edge** icon on the VM deskstop to launch a new browser window.
 
-<!-- TODO screenshot: Edge icon in the Windows taskbar -->
-
->[!Hint] Keep this browser window open for the rest of the lab — you'll add one
-> tab per step over the next three pages.
-
->[!Hint] Prefer dark mode? Click the **...** menu in the Edge toolbar, open
-> **Settings**, and switch the appearance to **dark**.
+Keep the browser open. We'll setup three browser tabs over the next three steps.
 
 <br/>
 
@@ -87,19 +74,22 @@ your **GitHub Codespace**.
 
 ===
 
-# Tab 1 — Azure Portal
+# Setup Tab 1: Azure Portal
 
-Your first tab is the **Azure Portal**, where your pre-provisioned resource group lives.
+The **Azure Portal** is where you see the details of the pre-provisioned resources for this lab.
 
-1. [] Click in the **address bar** of new tab and navigate to ++https://portal.azure.com++ 
-1. [] Sign in with the lab credentials below:
+1. Open a new browser tab and navigate to +++https://portal.azure.com+++
+
+1. [] Sign in with these lab credentials:
 
    - **Username:** +++@lab.CloudPortalCredential(User1).Username+++
-   - **Password (TAP):** +++@lab.CloudPortalCredential(User1).AccessToken+++
+   - **TAP:** +++@lab.CloudPortalCredential(User1).AccessToken+++
 
 1. [] If prompted to save the password, **dismiss** it.
-1. [] If prompted to stay signed in, check **Don't show this again** and select
-   **Yes**.
+1. [] If prompted to stay signed in, check **Don't show this again** and select **Yes**.
+1. [] Dismiss any other Edge popups you see.
+
+You should see an Azure portal page like this:
 
    ![Azure portal home](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-02-azure-portal-home.png)
 
@@ -108,95 +98,81 @@ Your first tab is the **Azure Portal**, where your pre-provisioned resource grou
 1. [] Confirm you see **two** resource groups, one of which starts with
    **rg-lab540**.
 
+   ![The Resource groups page listing ResourceGroup1 and an rg-lab540 resource group](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-02-resource-groups.png)
+
 <br/>
 
->[!Alert] If you do **not** see a resource group starting with **rg-lab540**,
-> raise your hand and ask a proctor for help. This is likely a cold-start
-> problem where provisioning hasn't finished yet.
-
->[!Knowledge] Everything in your resource group — the Foundry project, model
-> deployment, container registry, and Application Insights — was pre-provisioned
-> for you by the Skillable environment.
-
->[!Hint] Prefer dark mode? Click the **gear** icon in the portal toolbar, open
-> **Appearance**, and switch the theme to **dark**. Click the **gear** icon
-> again to return to the default portal page.
+>[!Alert] If you do **not** see the resource group starting with **rg-lab540**, raise your hand and ask a proctor for help. This is likely a cold-start problem where provisioning hasn't finished yet.
 
 ---
 
-> ✅ **Success:** the Azure Portal home page is open in **Tab 1**.
+> ✅ **Success:** Your Azure portal tab is ready and resource group was provisioned.
 
 ===
 
-# Tab 2 — Foundry Portal
+# Setup Tab 2: Foundry Portal
 
-Your second tab is the **Microsoft Foundry Portal**, where your hosted agent is
-deployed.
+The **Microsoft Foundry Portal** is where you view your hosted agent and related project details.
 
-1. [] Open a **new tab** in Edge. Navigate to this address: ++https://ai.azure.com++ 
-1. [] Select the **Sign in** button to login with your credentials.
-1. [] After signing in, confirm that the **New Foundry** switch is enabled. If it isn't already active, toggle it on.
+1. Open a new browser tab and navigate to  +++https://ai.azure.com+++ 
+
+1. [] Click the **Sign in** button. It should login automatically with the previous Azure credentials.
+1. [] You should see the **All Resources** page shown below with the **New Foundry** tab enabled. _If not enabled, toggle it on_.
 
    ![The All resources page with the New Foundry toggle enabled](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-new-foundry-toggle.png)
 
-1. [] On the **All resources** page, select the existing **ai-project-lab540-...** project.
+1. [] You should see a single **ai-project-lab540-...** project listed. Click to view its details page - and dismiss the popup shown.
 
-   ![The Foundry project home page after selecting the ai-project-lab540 project](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-project-home.png)
+   ![The Foundry project home page with the "Your project is set up" dialog and its Skip button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-project-home.png)
 
-1. [] After the project opens, select **Agents** from the left navigation menu.
-1. [] Confirm that the existing **zava-concierge** agent is displayed.
+1. [] Now click the **Agents** option in the menu sidebar. You should see a single **zava-concierge** agent displayed as shown.
 
    ![The Agents page in the Foundry portal listing the running zava-concierge hosted agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-agents-list.png)
 
 <br/>
 
->[!Note] A welcome tour or "create an agent" dialog may appear. Close it — your
-> agent already exists and you'll open it in the next stage.
-
 ---
 
-> ✅ **Success:** the Foundry Portal home is open in **Tab 2** with New Foundry on.
+> ✅ **Success:** Your Foundry portal tab is ready with the zava-concierge agent deployed.
 
 ===
 
-# Tab 3 — Launch Codespace
+# Setup Tab 3: GitHub Codespaces
 
-Your third tab is your **GitHub Codespace** — the cloud dev environment where
-you'll run the optimize loop later. It takes a few minutes to build, so you'll
-start it now and let it warm up while you explore the agent.
+We will use **GitHub Codespace** as the development environment for this lab. It takes a few minutes to load - so we will start the process in this step and let it complete in the background.
+
 
 ## Sign in to the Skillable GitHub org
 
-1. [] Open a **new tab** and navigate to
-   ++https://github.com/enterprises/skillable-events/sso++
+1. Open a new browser tab and navigate to  
+   +++https://github.com/enterprises/skillable-events/sso+++
 
-1. [] Select **Continue** and complete the sign-in process. You’ll be authenticated with the same lab credentials. 
+   ![The Single sign-on to Skillable Events page with the green Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-github-sso.png)
 
-<!-- TODO screenshot: GitHub SSO Continue with GHE button -->
+1. [] Click **Continue**. You’ll be authenticated with the same lab credentials. 
 
->[!Alert] If you receive a **404** error, wait for several minutes and then try again.
+>[!Alert] If you receive a **404** error, wait for several minutes and then try again. This is likely because the GitHub Enterprise license is still being activated.
  
 ## Launch the Codespace
 
-1. [] Navigate to the workshop repo at ++https://aka.ms/build26/lab540/skillable++
-1. [] Select the green **Code** button, then the **Codespaces** tab.
-1. [] Select **Create codespace on main** — a new tab opens and begins building.
+1. [] In the same tab, copy-paste this lab repo link and click to navigate to it: ++https://aka.ms/build26/lab540/skillable++
+1. [] Click the green **Code** button, select the **Codespaces** tab, and click the **Create codespace on main** button as shown.
 
-   ![The Code button's Codespaces tab with the Create codespace on main button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-create-codespace.png)
+   ![The Code button's Codespaces tab showing the Creating codespace button after it is selected](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-create-codespace.png)
 
->[!Alert] **Don't wait for it to finish.** The Codespace can take several
-> minutes to build. Leave this tab open and continue to the next stage — you'll
-> come back to it once it's ready.
+A new browser tab should open with a VS Code session loading. This is your GitHub Codespaces tab - your browser should now have four tabs as shown in the image.
+
+![A new browser tab with VS Code in the browser showing Opening Remote and Building codespace while the Codespace starts](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-codespace-opening.png)
+
+>[!Alert] **Don't wait for the page to load.** GitHub Codespaces can take several minutes to build. Leave this tab open and move to the next step. We'll come back here later in the lab to check if it is ready.
 
 <br/>
 
 ---
 
-> ✅ **Success:** your Codespace is building in **Tab 3**.
+> ✅ **Success:**  Your GitHub Codespaces environment is loading.
 >
-> 🏁 **Stage 1 complete.** You have three tabs open — Azure Portal, Foundry
-> Portal, and your Codespace — and your dev environment is warming up. While it
-> builds, you'll explore the hosted agent and Foundry's built-in observability.
+> 🏁 **Stage 1 complete.** You have browser tabs open to three locations — Azure Portal, Foundry Portal, and GitHub Codespaces. While it builds, let's explore the hosted agent and Foundry's built-in observability.
 
 ===
 
@@ -254,15 +230,18 @@ Before you send the first prompt, let's turn on the **evaluators** so Foundry sc
 
 Send a simple, single-specialist request and watch the metrics light up.
 
-1. [] In the playground, type this prompt as input:
+1. [] In the playground, copy and paste this prompt as input:
 
-   +++What flights are available from Chicago to Rome?+++
+   ++What flights are available from Chicago to Rome?++
 
 1. [] Wait for the concierge to reply with flight options (this takes a few  seconds). 
 1. [] Note the default response, the **log stream** of agent actions, the
    auto-evaluated **quality & safety metrics**, and the link to **traces** for this request.
 
    ![The prompt 1 flight response with evaluator metrics in the playground](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-prompt1.png)
+
+
+>[!Knowledge] If the agent responds by asking you for dates instead of providing available flights, try clearing the chat (click the "+" icon next to Metrics) and ask "What flights are available from Chicago to Rome? My dates are flexible" to make the clarification.
 
 ## View Evaluation Metrics
 
@@ -287,14 +266,19 @@ Send a simple, single-specialist request and watch the metrics light up.
 
    ![The Monitor tab showing aggregated agent metrics and evaluations](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-monitor.png)
 
-1. [] Click the **agent helper** icon within any chart to get an AI-generated
-   analysis of that metric, surfacing insights into agent performance.
+1. [] Scroll down to view the Token usage panel. It should show you the tokens used by this agent so far. Click on the **Open cost dashboard** to see cost details for that period. _This will switch you to the Cost (Preview) tab under Monitoring. After review, click the Overview tab to return to the original pane._
 
-   ![The Runs and token metrics chart with an AI-generated analysis of agent runs and token usage](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-monitor-analyze.png)
+<!-- TODO: Add image -->
+
+1. [] Scroll up to view the Agent runs panel. It should show you the agent requests made during a given period. Click the **View agent traces** button to dive into agent traces for that period. _This will switch you to the Traces pane for the Agent. After review, click the Monitor tab to return to the original pane._
+
+<!-- TODO: Add image -->
+
 
 >[!Knowledge] The **Monitor** tab is your single pane of glass in production. It
 > aggregates calls, token usage, tool invocations, and failures across the
 > agent's lifetime, with AI-generated analysis to surface insights.
+> **Your specific pane may show different metrics based on your usage**.
 
 ---
 
@@ -308,9 +292,14 @@ Send a simple, single-specialist request and watch the metrics light up.
 Now send a multi-part request that makes the concierge coordinate all three
 specialists.
 
+1. [] Click the Playground tab to return to playground.
+   - Click "+" (next to Metrics) to start a new chat.
+   - Click the "→" on Logstream pane to close it.
+   - You now see just the playground panel in focus.
+
 1. [] In the playground, send this prompt:
 
-   +++Plan a trip from Chicago to Rome for the first two weeks of November. I need flights, a hotel, and a car rental.+++
+   ++Plan a trip from Chicago to Rome for the first two weeks of November. I need flights, a hotel, and a car rental.++
 
 1. [] Wait for the concierge to compose the full itinerary — the response now
    includes flight, hotel, and car results, so all three specialists were called
@@ -332,15 +321,26 @@ specialists.
 1. [] Click the **User View** tab, then **Play**. This is a time-based replay of
    which requests went to each agent, when, and how the final response was
    composed — giving you an intuitive sense of per-agent latency. Each agent's
-   requests and responses stream in parallel before being merged into one reply.
+   requests and responses stream in parallel before being merged into one reply. (Click the → to expand the Span tree view to the left if you want to see replay across both user and trajectory views)
 
    ![The User View tab showing a time-based replay of requests to each agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
 
->[!Knowledge] **Trajectory vs. User View** are two complementary lenses on the
-> same trace. You can pause the trace in one view, and resume in the other to see how they correlate for debugging etc..
+
+1. [] (Optional) Click the **Graph View** tab, then **Play**. This shows the
+   trace as a node-and-edge graph. Each agent and tool is a node, and each edge
+   is a call or handoff between them. As the replay runs, nodes light up in
+   order, so you can see how the concierge connects to the flight, hotel, and
+   car-rental agents and which paths ran during this turn.
+
+
+1. [] Click the "X" to close the trace view dialog. Then click "Playground" to return to the playground view for the next step.
+
+>[!Knowledge] **Trajectory, User and Graph Views** are complementary lenses on the
+> same trace. You can switch views in the middle of a replay (or pause, switch, resume if preferred) to see how a specific moment appears in each for debugging etc..
 
 - The **Trajectory view** exposes the agent's internal orchestration how the concierge decomposed and delegated — so you can pinpoint *which* agent or tool call went wrong. Replays also give you an intuitive sense for latency by making you "see" delays between actions, or time spent in executing a tool call etc. 
 - The **User View** replays the interaction on a timeline, showing *when* each request fired, so you can spot the step responsible for latency. It also makes it easier to see how agents are streaming responses in parallel.
+- The **Graph View** maps the trace as a topology of agents and tools connected by calls and handoffs, so you can quickly see *who talked to whom* and spot unexpected, missing, or repeated paths in the orchestration.
 - Together they let you debug correctness and diagnose performance from a single captured trace — no re-running required.
 
 ---
@@ -355,20 +355,32 @@ specialists.
 Finally, send an **out-of-scope** request and watch the agent's instructions
 keep it on task.
 
+1. [] Switch to the playground tab if you have not already done so. Then start a new chat session (by clicking the "+" icon next to Metrics dropdown)
+
 1. [] In the playground, send this prompt and read the concierge's description
    of its role as a travel concierge:
 
-   +++what can you do?+++
+   ++what can you do?++
 
 1. [] Now send an out-of-scope prompt and watch the agent keep on task:
 
-   +++Can you help me write a Python script?+++
+   ++Can you help me write a Python script?++
 
 1. [] Confirm the concierge **politely declines** and redirects to travel
-   topics instead of answering. If it doesn't, that's another area for agent
-   optimization.
+   topics instead of answering. If it does not, this is an area for further optimization. (You can try the optional steps below to explore corrections.)
 
    ![The concierge politely declining the out-of-scope request and redirecting to travel topics](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-05-prompt3.png)
+
+1. (**OPTIONAL**) Do this step only if the concierge responded to the previous request in an unexpected way (by providing Python code).
+
+   - [] Send it the prompt below. This subtly reminds it to re-read its instructions. It should respond acknowledging that it acted incorrectly before.
+
+      ++Should you not be declining all requests outside travel topics?"
+
+   - [] Now, send the same prompt again. You should see the request declined.
+
+      ++Can you help me write a Python script?++
+
 
 >[!Knowledge] The concierge's **agent instructions** define its scope. Because
 > the instructions tell it to handle travel only, it refuses unrelated requests
@@ -396,26 +408,33 @@ Your Codespace should be ready now. Switch to its tab (Tab 3) and let's move to 
 1. [] Switch to the **Codespace** tab. Wait until VS Code has fully loaded.
 1. [] If the **Codespace** has stopped after being idle, select **Restart** and wait for the **Codespace** to start. 
 1. [] Wait until **VS Code** has fully loaded. 
+2. [] Verify that the Foundry Toolkit extension is installed. _The icon should be the last one in the sidebar. It may sometimes not be rendered though it is present - so hover over the space to see if "Foundry Toolkit" tip shows. **This is required for Foundry MCP server access later**.
 1. [] If the **Do you trust the authors of the files in this folder?** prompt appears, select **Trust Folder & Continue** to proceed. 
 
    ![The VS Code dialog asking whether you trust the authors of the files in this folder, with the Trust Folder & Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-trust-folder.png)
 
 1. [] Open a terminal (**Terminal → New Terminal**).
-1. [] Confirm the core CLIs are present:
 
-   +++az version+++
+1. [] Copy and run each command below to verify the core CLIs are present:
 
-   +++azd version+++
+   ++az version++
 
-   +++python --version+++
+   ++azd version++
+
+   ++python --version++
 
 
 ## Reset to the clean baseline
 
 Clear any stale **.foundry** state and restore the baseline concierge prompt. This ensures every run starts from the same intentionally under-optimized prompt as everyone else:
 
-1. [] Type this command in the terminal to execute it:  +++rm -rf zava/src/zava-travel-concierge/.foundry+++
-1. [] Type this command to run script: +++bash zava/src/zava-travel-concierge/scripts/reset-instructions.sh+++
+1. [] Copy and run this command in the terminal to execute it:  
+
+   +++rm -rf zava/src/zava-travel-concierge/.foundry++
+
+1. [] Type this command to run script: 
+
+   ++bash zava/src/zava-travel-concierge/scripts/reset-instructions.sh++
 
 ## What **main.py** does
 
@@ -449,25 +468,31 @@ code** sign-in to keep things simple inside the Codespace.
 
 ## Sign in with **az**
 
-1. [] In the terminal, run:
+1. [] Copy this command and run it in the terminal to clear it:
 
-   +++az login --use-device-code+++
+   ++clear++
 
-1. [] Open the verification URL, enter the code shown, and sign in with your lab
-   credentials:
+1. [] Now copy this command and run it:
 
+   ++az login --use-device-code++
+
+1. [] Open the verification URL, enter the code shown. You will be taken to a screen to authenticate with your subscription.
+
+1. [] Select the subscription you logged into earlier. (If needed sign in again with these credentials)
    **Username:** +++@lab.CloudPortalCredential(User1).Username+++
    **Password (TAP):** +++@lab.CloudPortalCredential(User1).AccessToken+++
 
-1. [] When prompted, select the default subscription.
+1. [] Click "Approve" in the pop-up dialog, then close the dialog window when prompted.
+
+1. [] Return to the Codespaces terminal. When prompted, select the default subscription.
 
 ## Sign in with **azd**
 
-1. [] In the terminal, run:
+1. [] In the terminal, copy and run this command:
 
-   +++azd auth login --use-device-code+++
+   ++azd auth login --use-device-code++
 
-1. [] Complete the same device-code sign-in flow.
+1. [] Press enter to complete the same device-code sign-in flow.
 
 <!-- TODO screenshot: device code sign-in prompt -->
 
@@ -475,8 +500,18 @@ code** sign-in to keep things simple inside the Codespace.
 
 Run the script to automatically have your **.env** created from the deployed infrastructure.
 
-1. [] Type this command in the terminal to execute it:  +++bash scripts/discover-env.sh+++
-1. [] You will be prompted for the name of the resource group to use. Enter the resource group name you see in the Azure portal tab. It should start with **rg-lab540-**.
+1. [] Copy this command and run it to clear the terminal:
+
+   ++clear++
+
+1. [] Copy this command to the terminal to execute it:  
+
+   +++bash scripts/discover-env.sh+++
+
+1. [] You will be prompted for the name of the resource group to use. 
+
+   - Visit the Azure portal tab and copy the resource group name. It should start with **rg-lab540-**.
+   - Return to the Codespaces tab and paste this where prompted.
 
 >[!Alert] If you try to copy-paste the value into the terminal, you will get a pop-up asking permission to **read from and write to the clipboard**. Select **Allow** — you will need this for future copy-paste actions.
 
@@ -495,7 +530,9 @@ Run the script to automatically have your **.env** created from the deployed inf
 You'll drive the optimize loop by talking to **GitHub Copilot**, which uses the
 **Foundry MCP** and the **microsoft-foundry** skill to do the work.
 
-1. [] Open **Copilot Chat** (Ctrl+Alt+I) and switch to **Agent** mode.
+1. [] Open **Copilot Chat** (Ctrl+Alt+I). This opens a side panel in your VS Code view.
+
+1. [] Click the "+" button and select **Agent** mode (should be default)
 1. [] Say hello to confirm it's responding - wait till it's ready:
 
    +++Hello!+++
@@ -554,9 +591,11 @@ Let's ask Copilot to help us recreate it before we begin optimization.
 
 Before you run it, take a moment to understand what the **Observe skill** does.
 
+1. [] First check that copilot chat has the _microsoft-foundry_ skill. Type "/microsoft-" in the chat and see if it finds the skill in that list.
+
 1. [] Ask Copilot to explain the skill:
 
-   +++Tell me about the microsoft-foundry skill and what the observe sub-skill does in this context.+++
+   ++/microsoft-foundry Tell me about what the observe sub-skill does for agents.+++
 
 1. [] Read the summary it gives you. It may look like this:
 
@@ -585,7 +624,7 @@ Now kick off the Observe skill and let it work.
 
 1. [] In Copilot Chat, send the activation prompt:
 
-   +++Use the observe subskill of the microsoft-foundry skill to evaluate my deployed zava-concierge agent+++
+   ++/microsoft-foundry Use the observe subskill to evaluate my deployed zava-concierge agent++
 
 1. [] Confirm Copilot starts the Observe workflow (you'll see it begin creating
    files and calling Foundry tools).
@@ -618,6 +657,16 @@ It creates a plan of action and starts executing tasks to establish the baseline
 evaluation results, as shown below.
 
 ![Copilot Chat creating tasks and running the baseline evaluation](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-init-tasks.png)
+
+
+
+1. **Optional:** Want to see the artifacts of this run? Switch to the Foundry Portal tab.
+
+   1. [] Verify you are in the Build tab. 
+   1. Click on **Data** in the sidebar. You should see ann _eval-data-xxx_ dataset uploaded by the skill.
+   1. Click on **Evaluations** in the sidebar. You should see a _dev-zava-xxx_ evaluation run in progress, initiated by the skill. _Note: You can also get to this directly from the Agent's Evaluations tab as well_.
+   1. Click through to the details view of that run. You should be able to monitor progress and see the overall metrics and detailed metrics results (once run completes). 
+
 
 >[!Alert] **Let it finish.** The baseline run and analysis take a few minutes.
 > Watch the updates stream in and **wait until the recommendations appear**
