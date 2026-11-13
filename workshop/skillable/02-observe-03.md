@@ -8,12 +8,12 @@ Send a simple, single-specialist request and watch the metrics light up.
 
    ![The first prompt pasted into the Message the agent box in the zava-concierge playground](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-prompt1-input.png)
 
-1. [] Wait for the concierge to reply with flight options (this takes a few  seconds). You should see the **log stream** of agent actions - and **evaluated metrics**  for response
+1. [] Wait for the concierge to reply with flight options (this takes a few seconds). You should see the **log stream** of agent actions - and **evaluated metrics** for the response.
 
    ![The concierge reply listing Chicago to Rome flights, with the Log stream and the AI Quality and Safety metrics highlighted](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-prompt1-reply.png)
 
 
->[!Knowledge] If agent responds by asking you to clarify dates, say "my dates are flexible" and see what happens. Agent responses are non-deterministic so your exact text and evaluation metrics may vary.
+>[!Knowledge] If the agent responds by asking you to clarify dates, say "my dates are flexible" and see what happens. Agent responses are non-deterministic so your exact text and evaluation metrics may vary.
 
 ## View Evaluation Metrics
 
@@ -50,6 +50,7 @@ Send a simple, single-specialist request and watch the metrics light up.
 
    ![The Traces pane listing the agent's recent traces for the selected period](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-agent-traces.png)
 
+>[!Note] The **Cost** dashboard and **Agent runs** panel may be empty or sparse right now — this data takes a few minutes to aggregate, and you've only sent one prompt. **Try refreshing the page once now — or revisit the Monitor tab at the end of the lab** to see them populated with data from all your runs.
 
 >[!Knowledge] The **Monitor** tab is your single pane of glass in production. It
 > aggregates calls, token usage, tool invocations, and failures across the

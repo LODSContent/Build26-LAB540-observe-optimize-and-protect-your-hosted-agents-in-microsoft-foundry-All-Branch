@@ -1,8 +1,8 @@
 # Return to Codespace
 
-Your Github Codespace should be ready by now. Switch back to that tab and let's move to **code-first observabilty.**
+Your GitHub Codespace should be ready by now. Switch back to that tab and let's move to **code-first observability.**
 
-1. [] Verify that you see something like this. This shows the Codespaces is loaded and ready. Click **Trust Folder & Continue** to dismiss the dialog. 
+1. [] Verify that you see something like this. This shows the Codespace is loaded and ready. Click **Trust Folder & Continue** to dismiss the dialog. 
 
    ![The VS Code dialog asking whether you trust the authors of the files in this folder, with the Trust Folder & Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-trust-folder.png)
 
@@ -20,7 +20,9 @@ Your Github Codespace should be ready by now. Switch back to that tab and let's 
 
 1. [] Open a terminal (**Terminal → New Terminal**).
 
-1. [] Copy and paste each command below in the terminal to verify commandline tools are installed:
+>[!Alert] The first time you paste into the terminal, you will see a browser pop-up asking for permission to access the clipboard. Select **Allow** — otherwise you will be unable to copy-paste into the terminal later.
+
+1. [] Copy and paste each command below in the terminal to verify command-line tools are installed:
 
    ++az version++
 
@@ -39,7 +41,9 @@ The _.foundry/_ folder contains state from previous Foundry skills runs. Run the
 
 1. [] Run this command to reset instructions.
 
-   ++bash zava/src/zava-travel-concierge/scripts/reset-instructions.sh++
+   +++bash zava/src/zava-travel-concierge/scripts/reset-instructions.sh+++
+
+>[!Alert] You may see a pop-up the first time you run this command as well. Select **Allow** to continue.
 
 ## Study the agent (**main.py**)
 

@@ -1,6 +1,6 @@
 # Setup Codespaces Environment
 
-We will be using a **code-first** approach to run the observability loop for agent optimization. To do this, we need to authenticate with Azure (to access our Foundry project) and setup our local environment variables (for code-first access).
+We will be using a **code-first** approach to run the observability loop for agent optimization. To do this, we need to authenticate with Azure (to access our Foundry project) and set up our local environment variables (for code-first access).
 
 >[!Hint] If you see a popup anytime asking "Would you like to install Azure skills?" - go ahead and click the Install button.
 
@@ -35,7 +35,7 @@ The Azure Developer CLI was used to provision our infrastructure. We will need i
 
 ## Setup **.env** in Codespaces
 
-We can now use _azd_ to setup our local environment variables.
+We can now use _azd_ to set up our local environment variables.
 
 
 1. [] Return to the VS Code terminal. _Use "clear" to clear terminal output before you begin_.
@@ -44,15 +44,15 @@ We can now use _azd_ to setup our local environment variables.
 
    +++bash scripts/discover-env.sh+++
 
-1. [] You will be prompted for the resource group name. Switch to the Azure portal tab and copy the name you see 
+1. [] You will be prompted for the resource group name. Switch to the Azure portal tab and copy the resource group name you see.
 
    ![The Azure portal resource group overview with the rg-lab540 resource group name highlighted for copying](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-02-resource-group.png)
 
-1. [] Return to the VS Code terminal and paste that as response and wait for script to finish.
+1. [] Return to the VS Code terminal and paste it as the response and wait for the script to finish.
 
 >[!Alert] If you try to copy-paste the value into the terminal, you will get a pop-up asking permission to **read from and write to the clipboard**. Select **Allow** — you will need this for future copy-paste actions.
 
-1. [] Verify that a **.env** was setup with all required parameters filled in.
+1. [] Verify that a **.env** was created with all required parameters filled in.
 
    ![The .env file open in VS Code with AZURE_RESOURCE_GROUP filled in, and the terminal showing discover-env.sh reporting that all environment variables are set](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-02-env.png)
 

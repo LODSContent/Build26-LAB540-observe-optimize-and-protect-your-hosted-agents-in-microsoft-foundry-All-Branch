@@ -3,6 +3,7 @@
 Watch the Observe skill work. This is **code-first optimization** — the same
 loop you saw in the portal, now driven from your editor.
 
+>[!Note] The Copilot run may occasionally **stop and ask for your input**. Pick the option that feels reasonable — there are no wrong answers. If you prefer, ask Copilot to explain the options or make a recommendation. This reflects a realistic skill run.
 
 ## GitHub Copilot Session
 
@@ -25,11 +26,7 @@ As it runs, you'll see Copilot:
 
    ![Copilot Chat showing the baseline evaluator pass/fail table, failure clusters with root causes, and ranked next-step recommendations](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-recommendations.png)
 
-It creates a plan of action and starts executing tasks to establish the baseline
-evaluation results, as shown below.
-
-![Copilot Chat creating tasks and running the baseline evaluation](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-init-tasks.png)
-
+It creates a plan of action and starts executing tasks to establish the baseline evaluation results. Just watch the Copilot session to see it create and execute a plan.
 
 ## Foundry Portal Assets (Optional)
 
@@ -37,7 +34,7 @@ Want to see the artifacts of this run? Switch to the Foundry Portal tab.
 
    1. [] Verify you are in the Build tab. 
 
-   1. Click on **Data** in the sidebar. You should see ann _eval-data-xxx_ dataset uploaded by the skill.
+   1. Click on **Data** in the sidebar. You should see an _eval-data-xxx_ dataset uploaded by the skill.
 
       ![The Foundry Data page listing the eval-data dataset uploaded by the skill](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-data.png)
 

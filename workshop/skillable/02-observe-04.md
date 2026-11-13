@@ -5,7 +5,7 @@ specialists.
 
 1. [] Return to the Playground tab. Use the "+" icon (next to Metrics) to start a new chat.
 
-1. [] Click the "→" on Logstream pane to close it. You should see just the playground panel in focus.
+1. [] Click the "→" on the Log stream pane to close it. You should see just the playground panel in focus.
 
 1. [] Copy this prompt into the chat and submit the request:
 
@@ -19,19 +19,19 @@ specialists.
 
 ## Explore Trace Viewer
 
-What happened when you made the request? We can use traces to look under the hood and see how the request-response flow occurred,
+What happened when you made the request? We can use traces to look under the hood and see how the request-response flow occurred.
 
 1. [] Select **Traces**. Then switch to the **Conversation view** tab.
 
    ![The Traces tab in Conversation view listing recent conversation IDs with duration, tokens, and estimated cost](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-conversation-view.png)
 
-1. [] Locate the recorded conversation and select the **Conversation ID.**. You should see this trace detail view with the **Trajectories** tab selected.   
+1. [] Locate the recorded conversation and select the **Conversation ID**. You should see this trace detail view with the **Trajectories** tab selected.   
 
    ![The trace detail view with the Trajectories tab selected, highlighting the Play controls and the span, chat call, tool call, time, and token metrics](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-trace-detail.png)
 
 1. [] Check the metrics (top-right) for chat calls, tool calls, tokens, time, and **spans**. And note the Play button that gives you a time-lapse replay of traces. We'll try that next.
 
-1. [] Switch to the **User View** tab. This shows you the chat conversation view of the traces. Click the **Span tree** button to expand that pane. You should now see both the user view and the trajectory view side by side. _Optional: Use the toggle on the other size to close the Metadata pane to focus on traces alone_.
+1. [] Switch to the **User View** tab. This shows you the chat conversation view of the traces. Click the **Span tree** button to expand that pane. You should now see both the user view and the trajectory view side by side. _Optional: Use the toggle on the other side to close the Metadata pane to focus on traces alone_.
 
    ![The User view tab during replay, with the Span tree expand toggle highlighted on the left and invoke_agent span metadata on the right](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
 
@@ -48,9 +48,9 @@ What happened when you made the request? We can use traces to look under the hoo
 
 <br/>
 
->[!Knowledge] **Trajectory, User and Graph Views** are complementary lenses on the same trace. You can switch views in the middle of a replay (or pause, switch, resume if preferred) to see how a specific moment appears in each for debugging etc..
+>[!Knowledge] **Trajectory, User and Graph Views** are complementary lenses on the same trace. You can switch views in the middle of a replay (or pause, switch, resume if preferred) to see how a specific moment appears in each for debugging.
 
-- The **Trajectory view** exposes the agent's internal orchestration how the concierge decomposed and delegated — so you can pinpoint *which* agent or tool call went wrong. Replays also give you an intuitive sense for latency by making you "see" delays between actions, or time spent in executing a tool call etc. 
+- The **Trajectory view** exposes the agent's internal orchestration — how the concierge decomposed and delegated — so you can pinpoint *which* agent or tool call went wrong. Replays also give you an intuitive sense for latency by making you "see" delays between actions, or time spent in executing a tool call etc. 
 - The **User View** replays the interaction on a timeline, showing *when* each request fired, so you can spot the step responsible for latency. It also makes it easier to see how agents are streaming responses in parallel.
 - The **Graph View** maps the trace as a topology of agents and tools connected by calls and handoffs, so you can quickly see *who talked to whom* and spot unexpected, missing, or repeated paths in the orchestration.
 - Together they let you debug correctness and diagnose performance from a single captured trace — no re-running required.

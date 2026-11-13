@@ -2,9 +2,9 @@
 
 The **Microsoft Foundry Portal** is where you view your hosted agent and related project details.
 
-1. Open a new browser tab and navigate to  +++https://ai.azure.com+++ 
+1. Open a new browser tab and navigate to +++https://ai.azure.com+++
 
-1. [] Click the **Sign in** button. It should login automatically with the previous Azure credentials.
+1. [] Click the **Sign in** button. It should sign you in automatically with the previous Azure credentials.
 1. [] You should see the **All Resources** page shown below with the **New Foundry** tab enabled. _If not enabled, toggle it on_.
 
    ![The All resources page with the New Foundry toggle enabled](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-new-foundry-toggle.png)

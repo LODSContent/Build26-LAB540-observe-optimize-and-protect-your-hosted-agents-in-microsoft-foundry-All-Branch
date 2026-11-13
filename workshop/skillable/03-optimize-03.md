@@ -55,11 +55,13 @@ Our infrastructure was _pre-provisioned_ by the Azure Developer CLI (azd) outsid
 
 ![The .azure recreation prompt pasted into the Copilot Chat input box with Claude Sonnet 5.5 and Allow all selected](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-azure-prompt.png)
 
+>[!Alert] While Copilot works, you may see a pop-up asking you to **trust the folder** (or its contents). Confirm it to let Copilot continue.
+
 - [] Verify that the **zava/.azure** folder is created and that a subfolder exists for the **rg-lab540-XXX** environment for your deployed project.
 
-   ![The VS Code Explorer showing the new zava/.azure folder with an lab540 environment subfolder containing .env and config.json, while Copilot runs azd ai agent init](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-azure-created.png)
+   ![The VS Code Explorer showing the new zava/.azure folder with a lab540 environment subfolder containing .env and config.json, while Copilot runs azd ai agent init](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-03-azure-created.png)
 
->[!Hint] If you run into any issues at any time, start by asking GitHub Copilot to debug for you. Because it has access to the Foundry MCP server and Microsoft Learn docs, it can take advantage of the latest informtion and best practices to resolve it for you.
+>[!Hint] If you run into any issues at any time, start by asking GitHub Copilot to debug for you. Because it has access to the Foundry MCP server and Microsoft Learn docs, it can take advantage of the latest information and best practices to resolve it for you.
 
 ---
 

@@ -1,6 +1,6 @@
 # Open Agent Playground
 
-While GitHub Codespaces loads, let's use the time to explore our hosted agent. Switch to the **Foundry Portal** tab (Tab 2) you had setup previously.
+While GitHub Codespaces loads, let's use the time to explore our hosted agent. Switch to the **Foundry Portal** tab (Tab 2) you set up previously.
 
 1. [] You should be on the **Agents** page with the **zava-concierge** agent listed. _If not, just click the Build menu option and select Agents from the sidebar to see this view_.
 

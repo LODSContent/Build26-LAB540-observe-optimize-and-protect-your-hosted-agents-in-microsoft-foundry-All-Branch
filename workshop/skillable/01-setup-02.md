@@ -18,7 +18,7 @@ You should see an Azure portal page like this:
    ![Azure portal home](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-02-azure-portal-home.png)
 
 1. [] Select **Resource groups** in the portal to view the list of resource
-   groups.  Maximize **Edge** if you do not see the **Resource groups**
+   groups. Maximize **Edge** if you do not see the **Resource groups** option.
 1. [] Confirm you see **two** resource groups, one of which starts with
    **rg-lab540**.
 
@@ -30,4 +30,4 @@ You should see an Azure portal page like this:
 
 ---
 
-> ✅ **Success:** Your Azure portal tab is ready and resource group was provisioned.
+> ✅ **Success:** Your Azure portal tab is ready and the resource group was provisioned.

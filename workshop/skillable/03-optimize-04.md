@@ -2,7 +2,7 @@
 
 Before you run it, take a moment to understand what the **Observe skill** does.
 
-1. [] First check that copilot chat has the _microsoft-foundry_ skill. Type "/microsoft-" in the chat and see if it finds the skill in that list.
+1. [] First check that Copilot Chat has the _microsoft-foundry_ skill. Type "/microsoft-" in the chat and see if it finds the skill in that list.
 
    ![Typing /microsoft- in Copilot Chat lists the microsoft-foundry skill in the autocomplete menu](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-04-skill-picker.png)
 
@@ -25,6 +25,12 @@ Before you run it, take a moment to understand what the **Observe skill** does.
 >    evaluators.
 > 3. **Analyzes** the failures and patterns in the results.
 > 4. **Recommends** specific optimizations to improve quality.
+
+>[!Hint] **Foundry and azd are evolving rapidly**, so Copilot may detect dependency or version issues as it works. If it offers you options to fix them, ask:
+>
+> +++What do you recommend?+++
+>
+> Then tell it to take that action. This way Copilot reasons about the latest changes and adapts automatically, keeping the lab working as the tools evolve.
 
 ---
 
