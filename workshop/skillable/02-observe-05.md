@@ -23,7 +23,7 @@ keep it on task.
 
    - [] Send it the prompt below. This subtly reminds it to re-read its instructions. It should respond acknowledging that it acted incorrectly before.
 
-      ++Should you not be declining all requests outside travel topics?"
+      ++Should you not be declining all requests outside travel topics?++
 
    - [] Now, send the same prompt again. You should see the request declined.
 

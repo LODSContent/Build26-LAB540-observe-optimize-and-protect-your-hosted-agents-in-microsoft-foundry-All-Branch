@@ -6,7 +6,7 @@ Before you run it, take a moment to understand what the **Observe skill** does.
 
 1. [] Ask Copilot to explain the skill:
 
-   ++/microsoft-foundry Tell me about what the observe sub-skill does for agents.+++
+   +++/microsoft-foundry Tell me about what the observe sub-skill does for agents.+++
 
 1. [] Read the summary it gives you. It may look like this:
 

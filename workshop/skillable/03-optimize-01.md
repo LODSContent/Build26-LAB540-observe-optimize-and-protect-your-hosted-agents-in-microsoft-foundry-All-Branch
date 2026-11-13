@@ -27,7 +27,7 @@ Clear any stale **.foundry** state and restore the baseline concierge prompt. Th
 
 1. [] Copy and run this command in the terminal to execute it:  
 
-   +++rm -rf zava/src/zava-travel-concierge/.foundry++
+   +++rm -rf zava/src/zava-travel-concierge/.foundry+++
 
 1. [] Type this command to run script: 
 

@@ -295,7 +295,7 @@ Send a simple, single-specialist request and watch the metrics light up.
 
 ===
 
-# Run Prompt 2
+# Run Complex Prompt
 
 Now send a multi-part request that makes the concierge coordinate all three
 specialists.
@@ -383,7 +383,7 @@ keep it on task.
 
    - [] Send it the prompt below. This subtly reminds it to re-read its instructions. It should respond acknowledging that it acted incorrectly before.
 
-      ++Should you not be declining all requests outside travel topics?"
+      ++Should you not be declining all requests outside travel topics?++
 
    - [] Now, send the same prompt again. You should see the request declined.
 
@@ -438,7 +438,7 @@ Clear any stale **.foundry** state and restore the baseline concierge prompt. Th
 
 1. [] Copy and run this command in the terminal to execute it:  
 
-   +++rm -rf zava/src/zava-travel-concierge/.foundry++
+   +++rm -rf zava/src/zava-travel-concierge/.foundry+++
 
 1. [] Type this command to run script: 
 
@@ -603,7 +603,7 @@ Before you run it, take a moment to understand what the **Observe skill** does.
 
 1. [] Ask Copilot to explain the skill:
 
-   ++/microsoft-foundry Tell me about what the observe sub-skill does for agents.+++
+   +++/microsoft-foundry Tell me about what the observe sub-skill does for agents.+++
 
 1. [] Read the summary it gives you. It may look like this:
 
