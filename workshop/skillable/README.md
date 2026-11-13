@@ -230,7 +230,7 @@ Before you send the first prompt, let's turn on the **evaluators** so Foundry sc
 
 ===
 
-# Run First Prompt
+# Run Simple Prompt
 
 Send a simple, single-specialist request and watch the metrics light up.
 
@@ -300,51 +300,52 @@ Send a simple, single-specialist request and watch the metrics light up.
 Now send a multi-part request that makes the concierge coordinate all three
 specialists.
 
-1. [] Click the Playground tab to return to playground.
-   - Click "+" (next to Metrics) to start a new chat.
-   - Click the "→" on Logstream pane to close it.
-   - You now see just the playground panel in focus.
+1. [] Return to the Playground tab. Use the "+" icon (next to Metrics) to start a new chat.
 
-1. [] In the playground, send this prompt:
+1. [] Click the "→" on Logstream pane to close it. You should see just the playground panel in focus.
+
+1. [] Copy this prompt into the chat and submit the request:
 
    ++Plan a trip from Chicago to Rome for the first two weeks of November. I need flights, a hotel, and a car rental.++
 
-1. [] Wait for the concierge to compose the full itinerary — the response now
-   includes flight, hotel, and car results, so all three specialists were called
-   before composing the final answer.
+1. [] Wait for the concierge to compose the full itinerary. Note that the response now includes flight, hotel, and car results! All three specialists were called before composing the final answer.
 
    ![The prompt 2 itinerary response combining flights, hotel, and car rental](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-prompt2.png)
 
+<br/>
+
 ## Explore Trace Viewer
 
-1. [] Select **Traces**.
-1. [] Select **Conversation view**.
-1. [] Locate the recorded conversation and select the **Conversation ID.**
-1. [] In the trace detail window, select the **Trajectories** tab if it is not already selected.   
-1. [] **Trajectory** view visualizes this turns trace as a **conversation** — the concierge delegating
-   to the flight, hotel, and car-rental agents. Click **Play** to watch it unfold, and check the metrics (top-right) for chat calls, tool calls, tokens, time, and **spans**.
+What happened when you made the request? We can use traces to look under the hood and see how the request-response flow occurred,
 
-   ![The Trajectory view visualizing the conversation trace with the concierge delegating to the flight, hotel, and car-rental agents](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-trajectory.png)
+1. [] Select **Traces**. Then switch to the **Conversation view** tab.
 
-1. [] Click the **User View** tab, then **Play**. This is a time-based replay of
-   which requests went to each agent, when, and how the final response was
-   composed — giving you an intuitive sense of per-agent latency. Each agent's
-   requests and responses stream in parallel before being merged into one reply. (Click the → to expand the Span tree view to the left if you want to see replay across both user and trajectory views)
+   ![The Traces tab in Conversation view listing recent conversation IDs with duration, tokens, and estimated cost](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-conversation-view.png)
 
-   ![The User View tab showing a time-based replay of requests to each agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
+1. [] Locate the recorded conversation and select the **Conversation ID.**. You should see this trace detail view with the **Trajectories** tab selected.   
+
+   ![The trace detail view with the Trajectories tab selected, highlighting the Play controls and the span, chat call, tool call, time, and token metrics](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-trace-detail.png)
+
+1. [] Check the metrics (top-right) for chat calls, tool calls, tokens, time, and **spans**. And note the Play button that gives you a time-lapse replay of traces. We'll try that next.
+
+1. [] Switch to the **User View** tab. This shows you the chat conversation view of the traces. Click the **Span tree** button to expand that pane. You should now see both the user view and the trajectory view side by side. _Optional: Use the toggle on the other size to close the Metadata pane to focus on traces alone_.
+
+   ![The User view tab during replay, with the Span tree expand toggle highlighted on the left and invoke_agent span metadata on the right](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
+
+1. [] Click **Play**. You'll see a time-based replay showing which requests went to each agent, when, and how the final response was composed — giving you an intuitive sense of per-agent latency. Each agent's requests and responses stream in parallel before being merged into one reply. **Notice how the timeline color matches the step in the trajectory, and correlates to the state of the chat output**.
+
+   ![The User view replaying the conversation with the Span tree expanded on the left, highlighting the active span as the agent responses stream in on the right](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view-replay.png)
+
+1. [] (Optional) Click the **Graph View** tab, then **Play**. This shows the trace as a node-and-edge graph. Each agent and tool is a node, and each edge is a call or handoff between them. As the replay runs, nodes light up in order, so you can see how the concierge connects to the flight, hotel, and car-rental agents and which paths ran during this turn.
+
+   ![The Graph view replaying the trace, with the active span highlighted in the Span tree and as a node in the graph](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-graph-view.png)
 
 
-1. [] (Optional) Click the **Graph View** tab, then **Play**. This shows the
-   trace as a node-and-edge graph. Each agent and tool is a node, and each edge
-   is a call or handoff between them. As the replay runs, nodes light up in
-   order, so you can see how the concierge connects to the flight, hotel, and
-   car-rental agents and which paths ran during this turn.
+1. [] Close the trace view dialog and return to the "Playground" tab for the next step.
 
+<br/>
 
-1. [] Click the "X" to close the trace view dialog. Then click "Playground" to return to the playground view for the next step.
-
->[!Knowledge] **Trajectory, User and Graph Views** are complementary lenses on the
-> same trace. You can switch views in the middle of a replay (or pause, switch, resume if preferred) to see how a specific moment appears in each for debugging etc..
+>[!Knowledge] **Trajectory, User and Graph Views** are complementary lenses on the same trace. You can switch views in the middle of a replay (or pause, switch, resume if preferred) to see how a specific moment appears in each for debugging etc..
 
 - The **Trajectory view** exposes the agent's internal orchestration how the concierge decomposed and delegated — so you can pinpoint *which* agent or tool call went wrong. Replays also give you an intuitive sense for latency by making you "see" delays between actions, or time spent in executing a tool call etc. 
 - The **User View** replays the interaction on a timeline, showing *when* each request fired, so you can spot the step responsible for latency. It also makes it easier to see how agents are streaming responses in parallel.
@@ -358,36 +359,36 @@ specialists.
 
 ===
 
-# Run Prompt 3
+# Run Out-of-Scope Prompt
 
 Finally, send an **out-of-scope** request and watch the agent's instructions
 keep it on task.
 
-1. [] Switch to the playground tab if you have not already done so. Then start a new chat session (by clicking the "+" icon next to Metrics dropdown)
-
-1. [] In the playground, send this prompt and read the concierge's description
-   of its role as a travel concierge:
+1. [] Start a new chat session in the Playground and send this prompt to get a sense for the concierge's role and instructions.
 
    ++what can you do?++
 
-1. [] Now send an out-of-scope prompt and watch the agent keep on task:
+1. [] Now make an out-of-scope request and see if the agent can stay on task.
 
    ++Can you help me write a Python script?++
 
 1. [] Confirm the concierge **politely declines** and redirects to travel
-   topics instead of answering. If it does not, this is an area for further optimization. (You can try the optional steps below to explore corrections.)
+   topics instead of answering. 
 
    ![The concierge politely declining the out-of-scope request and redirecting to travel topics](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-05-prompt3.png)
 
-1. (**OPTIONAL**) Do this step only if the concierge responded to the previous request in an unexpected way (by providing Python code).
 
-   - [] Send it the prompt below. This subtly reminds it to re-read its instructions. It should respond acknowledging that it acted incorrectly before.
+>[!Hint] **What if the agent responds by doing the task?** This can be a signal for prompt optimization to tighten the guardrails. You can try a simple exercise to see if you can reinforce the rule and see what happens. 
 
-      ++Should you not be declining all requests outside travel topics?++
+1. Paste this prompt into the chat. The agent should respond by acknowledging its mistake.
 
-   - [] Now, send the same prompt again. You should see the request declined.
+   ++Should you not be declining all requests outside travel topics?++
+
+1. Then try the prompt again. The agent should now decline to do the task.
 
       ++Can you help me write a Python script?++
+
+   - [] Now, send the same prompt again. You should see the request declined.
 
 
 >[!Knowledge] The concierge's **agent instructions** define its scope. Because

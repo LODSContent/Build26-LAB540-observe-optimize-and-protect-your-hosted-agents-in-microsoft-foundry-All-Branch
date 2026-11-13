@@ -1,4 +1,4 @@
-# Run First Prompt
+# Run Simple Prompt
 
 Send a simple, single-specialist request and watch the metrics light up.
 
