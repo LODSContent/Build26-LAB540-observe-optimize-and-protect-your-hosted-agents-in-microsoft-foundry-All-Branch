@@ -121,7 +121,7 @@ The **Microsoft Foundry Portal** is where you view your hosted agent and related
 
    ![The All resources page with the New Foundry toggle enabled](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-new-foundry-toggle.png)
 
-1. [] You should see a single **ai-project-lab540-...** project listed. Click to view its details page - and dismiss the popup shown.
+1. [] You should see a single **ai-project-lab540-...** project listed. Click to view its details page. _If you see any additional popups, dismiss them._
 
    ![The Foundry project home page with the "Your project is set up" dialog and its Skip button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-project-home.png)
 
@@ -144,23 +144,25 @@ We will use **GitHub Codespace** as the development environment for this lab. It
 
 ## Sign in to the Skillable GitHub org
 
-1. Open a new browser tab and navigate to  
-   +++https://github.com/enterprises/skillable-events/sso+++
+1. [] Open a new browser tab and navigate to +++https://github.com/enterprises/skillable-events/sso+++
 
    ![The Single sign-on to Skillable Events page with the green Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-github-sso.png)
 
-1. [] Click **Continue**. You’ll be authenticated with the same lab credentials. 
+1. [] Click **Continue**. You’ll be authenticated with the same Azure lab credentials. 
 
 >[!Alert] If you receive a **404** error, wait for several minutes and then try again. This is likely because the GitHub Enterprise license is still being activated.
  
+<br/>
+
 ## Launch the Codespace
 
-1. [] In the same tab, copy-paste this lab repo link and click to navigate to it: ++https://aka.ms/build26/lab540/skillable++
-1. [] Click the green **Code** button, select the **Codespaces** tab, and click the **Create codespace on main** button as shown.
+1. [] Copy the repository link below to the address bar in this tab, and click to navigate to the lab repo page: ++https://aka.ms/build26/lab540/skillable++
+
+1. [] Click the green **Code** button for a drop down menu. Select the **Codespaces** tab and click the **Create codespace on main** button shown.
 
    ![The Code button's Codespaces tab showing the Creating codespace button after it is selected](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-create-codespace.png)
 
-A new browser tab should open with a VS Code session loading. This is your GitHub Codespaces tab - your browser should now have four tabs as shown in the image.
+> **A new browser tab should open with a VS Code session loading.** This is your GitHub Codespaces tab. 
 
 ![A new browser tab with VS Code in the browser showing Opening Remote and Building codespace while the Codespace starts](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-04-codespace-opening.png)
 
@@ -172,25 +174,27 @@ A new browser tab should open with a VS Code session loading. This is your GitHu
 
 > ✅ **Success:**  Your GitHub Codespaces environment is loading.
 >
-> 🏁 **Stage 1 complete.** You have browser tabs open to three locations — Azure Portal, Foundry Portal, and GitHub Codespaces. While it builds, let's explore the hosted agent and Foundry's built-in observability.
+
+> 🏁 **Stage 1 (Setup) is complete.** 
+Your browser should now have four open tabs - Azure Portal, Foundry Portal, GitHub Repository, GitHub Codespaces - as shown in the image above.
 
 ===
 
-# Open Playground
+# Open Agent Playground
 
-While your Codespace builds, switch to the **Foundry Portal** tab (Tab 2) and
-meet your hosted agent.
+While GitHub Codespaces loads, let's use the time to explore our hosted agent. Switch to the **Foundry Portal** tab (Tab 2) you had setup previously.
 
-1. [] Confirm you are on the **Agents** page from the previous step, with the **zava-concierge** agent listed. If not, select **Build** in the top navigation, then **Agents** in the left navigation.
+1. [] You should be on the **Agents** page with the **zava-concierge** agent listed. _If not, just click the Build menu option and select Agents from the sidebar to see this view_.
 
    ![The Agents page in the Foundry portal listing the running zava-concierge hosted agent](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/01-setup-03-agents-list.png)
 
-1. [] Select **zava-concierge** to open the agent playground. It has three panels: **Setup** on the left, the chat in the middle, and **Log stream** on the right.
+1. [] Click on **zava-concierge** to open its agent playground. You will see three panels: **Setup** on the left, the chat in the middle, and **Log stream** on the right as shown below.
+
 1. [] Click the highlighted toggle to close the left **Setup** panel.
 
    ![The zava-concierge agent playground with the Setup panel toggle highlighted](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-01-playground.png)
 
-1. [] Leave the right **Log stream** panel open. The highlighted toggle shows where to hide it later — **don't click it now**; you'll use these logs in the next steps.
+1. [] Leave the right **Log stream** panel open for now so we can view the logs. (We can use the highlighted toggle to close it later).
 
    ![The playground with the Setup panel closed and the Log stream panel toggle highlighted](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-01-playground-logs.png)
 
@@ -204,7 +208,7 @@ meet your hosted agent.
 
 ===
 
-# Set Up Metrics
+# Activate Evaluation Metrics
 
 Before you send the first prompt, let's turn on the **evaluators** so Foundry scores each response as it happens.
 
@@ -213,7 +217,7 @@ Before you send the first prompt, let's turn on the **evaluators** so Foundry sc
 1. [] Enable all the built-in evaluators for the agent, then
    click to close.
 
-   ![The playground metrics panel with built-in evaluators enabled](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-02-metrics.png)
+   ![The playground Metrics dropdown listing the built-in evaluators to enable](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-02-metrics.png)
 
 <br/>
 
@@ -226,30 +230,34 @@ Before you send the first prompt, let's turn on the **evaluators** so Foundry sc
 
 ===
 
-# Run Prompt 1
+# Run First Prompt
 
 Send a simple, single-specialist request and watch the metrics light up.
 
-1. [] In the playground, copy and paste this prompt as input:
+1. [] Copy the text below and paste it into the "Message the agent" text area. Then click the arrow to submit the request as shown. 
 
    ++What flights are available from Chicago to Rome?++
 
-1. [] Wait for the concierge to reply with flight options (this takes a few  seconds). 
-1. [] Note the default response, the **log stream** of agent actions, the
-   auto-evaluated **quality & safety metrics**, and the link to **traces** for this request.
+   ![The first prompt pasted into the Message the agent box in the zava-concierge playground](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-prompt1-input.png)
 
-   ![The prompt 1 flight response with evaluator metrics in the playground](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-prompt1.png)
+1. [] Wait for the concierge to reply with flight options (this takes a few  seconds). You should see the **log stream** of agent actions - and **evaluated metrics**  for response
+
+   ![The concierge reply listing Chicago to Rome flights, with the Log stream and the AI Quality and Safety metrics highlighted](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-prompt1-reply.png)
 
 
->[!Knowledge] If the agent responds by asking you for dates instead of providing available flights, try clearing the chat (click the "+" icon next to Metrics) and ask "What flights are available from Chicago to Rome? My dates are flexible" to make the clarification.
+>[!Knowledge] If agent responds by asking you to clarify dates, say "my dates are flexible" and see what happens. Agent responses are non-deterministic so your exact text and evaluation metrics may vary.
 
 ## View Evaluation Metrics
 
-1. [] Hover over the **metrics** panel shown in green. You should see the evaluation score components behind it.
+1. [] Hover over the **AI Quality** metric. You should see the evaluation score components behind it as shown above.
+
+   ![Hovering the AI Quality metric shows Coherence, Fluency, and Relevance passing and Task adherence failing](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-prompt1.png)
+
 1. [] Click on one of the metrics in the green box. It should open up a trace view as shown below. Note how the trace visualizes the sequence of actions within the flow along with token costs and latency per response.
+
 1. [] Note the **evaluations attached to the trace** — the actual scores for the selected quality metrics plus latency, token costs, and the events that produced this response. This lets you correlate metrics with the actions taken, for more effective debugging when needed.
 
-   ![The trace view with quality evaluations attached for the prompt 1 turn](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-trace.png)
+   ![The conversation trace with the flight_agent tool call and the Evaluations tab showing per-metric scores and reasoning, including a failing Task adherence score](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-trace.png)
 
 >[!Knowledge] **Evaluators** are automatic graders that score each response live
 > on quality and safety — no test code required. A **trace** is the step-by-step
@@ -268,11 +276,11 @@ Send a simple, single-specialist request and watch the metrics light up.
 
 1. [] Scroll down to view the Token usage panel. It should show you the tokens used by this agent so far. Click on the **Open cost dashboard** to see cost details for that period. _This will switch you to the Cost (Preview) tab under Monitoring. After review, click the Overview tab to return to the original pane._
 
-<!-- TODO: Add image -->
+   ![The Cost (Preview) dashboard for the agent under Monitoring](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-cost.png)
 
 1. [] Scroll up to view the Agent runs panel. It should show you the agent requests made during a given period. Click the **View agent traces** button to dive into agent traces for that period. _This will switch you to the Traces pane for the Agent. After review, click the Monitor tab to return to the original pane._
 
-<!-- TODO: Add image -->
+   ![The Traces pane listing the agent's recent traces for the selected period](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-03-agent-traces.png)
 
 
 >[!Knowledge] The **Monitor** tab is your single pane of glass in production. It
