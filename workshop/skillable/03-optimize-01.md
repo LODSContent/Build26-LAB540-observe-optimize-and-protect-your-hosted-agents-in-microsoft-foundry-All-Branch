@@ -4,11 +4,11 @@ Your Github Codespace should be ready by now. Switch back to that tab and let's 
 
 1. [] Verify that you see something like this. This shows the Codespaces is loaded and ready. Click **Trust Folder & Continue** to dismiss the dialog. 
 
-   ![The VS Code dialog asking whether you trust the authors of the files in this folder, with the Trust Folder & Continue button](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-trust-folder.png)
+   ![The VS Code dialog asking whether you trust the authors of the files in this folder, with the Trust Folder & Continue button](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-trust-folder.png)
 
 1. [] Verify that the Foundry Toolkit (FTK) extension is installed by checking the VS Code sidebar. This is required to use the **Foundry MCP Server**. _Note: As shown, the FTK icon may sometimes not be rendered correctly - hover over the spot to see if the extension exists_.
 
-   ![The VS Code sidebar with the Foundry Toolkit icon highlighted and its tooltip shown](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-foundry-toolkit.png)
+   ![The VS Code sidebar with the Foundry Toolkit icon highlighted and its tooltip shown](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-01-foundry-toolkit.png)
 
 >[!Hint] If the Codespace had stopped (idle timeout), select restart or reload the tab and wait till it loads completely. It should take just a minute or so this time.
 

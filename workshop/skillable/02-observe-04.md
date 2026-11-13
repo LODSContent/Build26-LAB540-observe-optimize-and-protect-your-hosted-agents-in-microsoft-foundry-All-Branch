@@ -13,7 +13,7 @@ specialists.
 
 1. [] Wait for the concierge to compose the full itinerary. Note that the response now includes flight, hotel, and car results! All three specialists were called before composing the final answer.
 
-   ![The prompt 2 itinerary response combining flights, hotel, and car rental](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/02-observe-04-prompt2.png)
+   ![The prompt 2 itinerary response combining flights, hotel, and car rental](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-prompt2.png)
 
 <br/>
 
@@ -23,25 +23,25 @@ What happened when you made the request? We can use traces to look under the hoo
 
 1. [] Select **Traces**. Then switch to the **Conversation view** tab.
 
-   ![The Traces tab in Conversation view listing recent conversation IDs with duration, tokens, and estimated cost](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/02-observe-04-conversation-view.png)
+   ![The Traces tab in Conversation view listing recent conversation IDs with duration, tokens, and estimated cost](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-conversation-view.png)
 
 1. [] Locate the recorded conversation and select the **Conversation ID.**. You should see this trace detail view with the **Trajectories** tab selected.   
 
-   ![The trace detail view with the Trajectories tab selected, highlighting the Play controls and the span, chat call, tool call, time, and token metrics](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/02-observe-04-trace-detail.png)
+   ![The trace detail view with the Trajectories tab selected, highlighting the Play controls and the span, chat call, tool call, time, and token metrics](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-trace-detail.png)
 
 1. [] Check the metrics (top-right) for chat calls, tool calls, tokens, time, and **spans**. And note the Play button that gives you a time-lapse replay of traces. We'll try that next.
 
 1. [] Switch to the **User View** tab. This shows you the chat conversation view of the traces. Click the **Span tree** button to expand that pane. You should now see both the user view and the trajectory view side by side. _Optional: Use the toggle on the other size to close the Metadata pane to focus on traces alone_.
 
-   ![The User view tab during replay, with the Span tree expand toggle highlighted on the left and invoke_agent span metadata on the right](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
+   ![The User view tab during replay, with the Span tree expand toggle highlighted on the left and invoke_agent span metadata on the right](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view.png)
 
 1. [] Click **Play**. You'll see a time-based replay showing which requests went to each agent, when, and how the final response was composed — giving you an intuitive sense of per-agent latency. Each agent's requests and responses stream in parallel before being merged into one reply. **Notice how the timeline color matches the step in the trajectory, and correlates to the state of the chat output**.
 
-   ![The User view replaying the conversation with the Span tree expanded on the left, highlighting the active span as the agent responses stream in on the right](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view-replay.png)
+   ![The User view replaying the conversation with the Span tree expanded on the left, highlighting the active span as the agent responses stream in on the right](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-user-view-replay.png)
 
 1. [] (Optional) Click the **Graph View** tab, then **Play**. This shows the trace as a node-and-edge graph. Each agent and tool is a node, and each edge is a call or handoff between them. As the replay runs, nodes light up in order, so you can see how the concierge connects to the flight, hotel, and car-rental agents and which paths ran during this turn.
 
-   ![The Graph view replaying the trace, with the active span highlighted in the Span tree and as a node in the graph](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/02-observe-04-graph-view.png)
+   ![The Graph view replaying the trace, with the active span highlighted in the Span tree and as a node in the graph](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/02-observe-04-graph-view.png)
 
 
 1. [] Close the trace view dialog and return to the "Playground" tab for the next step.

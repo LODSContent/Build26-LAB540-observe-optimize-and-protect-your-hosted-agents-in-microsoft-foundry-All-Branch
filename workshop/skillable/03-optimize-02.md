@@ -46,7 +46,7 @@ We can now use _azd_ to setup our local environment variables.
 
 1. [] You will be prompted for the resource group name. Switch to the Azure portal tab and copy the name you see 
 
-   ![The Azure portal resource group overview with the rg-lab540 resource group name highlighted for copying](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-02-resource-group.png)
+   ![The Azure portal resource group overview with the rg-lab540 resource group name highlighted for copying](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-02-resource-group.png)
 
 1. [] Return to the VS Code terminal and paste that as response and wait for script to finish.
 
@@ -54,7 +54,7 @@ We can now use _azd_ to setup our local environment variables.
 
 1. [] Verify that a **.env** was setup with all required parameters filled in.
 
-   ![The .env file open in VS Code with AZURE_RESOURCE_GROUP filled in, and the terminal showing discover-env.sh reporting that all environment variables are set](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-02-env.png)
+   ![The .env file open in VS Code with AZURE_RESOURCE_GROUP filled in, and the terminal showing discover-env.sh reporting that all environment variables are set](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-02-env.png)
 
 >[!Knowledge] This *.env* will be used by GitHub Copilot in a subsequent step to establish our *.azure* configuration for the Azure Developer CLI tooling.
 

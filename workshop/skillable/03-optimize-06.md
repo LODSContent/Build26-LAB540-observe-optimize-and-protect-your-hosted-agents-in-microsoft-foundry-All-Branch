@@ -14,21 +14,21 @@ As it runs, you'll see Copilot:
 > in the editor. Leave it open — it updates as the loop runs and gives you a
 > live view of the observe loop's progress.
 
-![The .foundry folder in the Explorer with agent-metadata.yaml open in the editor, showing the baseline evaluation suite, while Copilot runs the Observe workflow in the chat panel](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-agent-metadata.png)
+![The .foundry folder in the Explorer with agent-metadata.yaml open in the editor, showing the baseline evaluation suite, while Copilot runs the Observe workflow in the chat panel](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-agent-metadata.png)
 
 
 1. [] Run a **baseline evaluation** of your deployed agent against that dataset.
 
-   ![agent-metadata.yaml showing the completed baseline evaluation with a pass/fail summary per evaluator, and Copilot Chat summarizing the baseline results](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-baseline-complete.png)
+   ![agent-metadata.yaml showing the completed baseline evaluation with a pass/fail summary per evaluator, and Copilot Chat summarizing the baseline results](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-baseline-complete.png)
 
 1. [] Produce a set of **recommendations** based on the failures it found.
 
-   ![Copilot Chat showing the baseline evaluator pass/fail table, failure clusters with root causes, and ranked next-step recommendations](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-recommendations.png)
+   ![Copilot Chat showing the baseline evaluator pass/fail table, failure clusters with root causes, and ranked next-step recommendations](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-recommendations.png)
 
 It creates a plan of action and starts executing tasks to establish the baseline
 evaluation results, as shown below.
 
-![Copilot Chat creating tasks and running the baseline evaluation](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-init-tasks.png)
+![Copilot Chat creating tasks and running the baseline evaluation](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-init-tasks.png)
 
 
 ## Foundry Portal Assets (Optional)
@@ -39,15 +39,15 @@ Want to see the artifacts of this run? Switch to the Foundry Portal tab.
 
    1. Click on **Data** in the sidebar. You should see ann _eval-data-xxx_ dataset uploaded by the skill.
 
-      ![The Foundry Data page listing the eval-data dataset uploaded by the skill](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-data.png)
+      ![The Foundry Data page listing the eval-data dataset uploaded by the skill](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-data.png)
 
    1. Click on **Evaluations** in the sidebar. You should see a _dev-zava-xxx_ evaluation run in progress, initiated by the skill. _Note: You can also get to this directly from the Agent's Evaluations tab as well_.
 
-      ![The Foundry Evaluations page showing the dev-zava-concierge-baseline-smoke run in progress](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-evaluations.png)
+      ![The Foundry Evaluations page showing the dev-zava-concierge-baseline-smoke run in progress](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-evaluations.png)
 
    1. Click through to the details view of that run. You should be able to monitor progress and see the overall metrics and detailed metrics results (once run completes). 
 
-      ![The completed baseline evaluation run details with overall metrics for latency, tokens, task completion, coherence, and indirect attack, and per-query results below](https://raw.githubusercontent.com/LODSContent/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry-All-Branch/aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-run-details.png)
+      ![The completed baseline evaluation run details with overall metrics for latency, tokens, task completion, coherence, and indirect attack, and per-query results below](https://raw.githubusercontent.com/nitya/Build26-LAB540-observe-optimize-and-protect-your-hosted-agents-in-microsoft-foundry/lods-aiewf26-refresh-test/workshop/skillable/images/03-optimize-06-portal-run-details.png)
 
 
 >[!Alert] **Let the skill run finish.** The baseline run and analysis take a few minutes.
